@@ -28,11 +28,6 @@ export default function App() {
     if (savedReports) setReports(JSON.parse(savedReports))
   }, [])
 
-  const saveHistory = (newHistory) => {
-    setHistory(newHistory)
-    localStorage.setItem('muoiHistory', JSON.stringify(newHistory))
-  }
-
   const startQuiz = (parentKey, subKey) => {
     const pool = allData[parentKey].subtopics[subKey].questions
     const picked = shuffle(pool).slice(0, 10).map(q => ({
@@ -84,25 +79,28 @@ export default function App() {
       setLastAnswer(null)
       setView('QUIZ')
     } else {
-      finishQuiz(userAnswers)
+      setView('RESULTS')
     }
   }
 
-  const finishQuiz = (answers) => {
+  // Save history once when RESULTS view is entered
+  useEffect(() => {
+    if (view !== 'RESULTS' || !session.length || !allData || !selectedParent || !selectedSub) return
     let score = 0
-    answers.forEach((a, i) => { if (a === session[i].correct) score++ })
-    const perfect = score === session.length
+    userAnswers.forEach((a, i) => { if (session[i] && a === session[i].correct) score++ })
     const attempt = {
       date: new Date().toLocaleDateString('vi-VN'),
       topic: allData[selectedParent].subtopics[selectedSub].label,
       score,
       total: session.length,
-      perfect,
+      perfect: score === session.length,
     }
-    const newHistory = [attempt, ...history].slice(0, 20)
-    saveHistory(newHistory)
-    setView('RESULTS')
-  }
+    setHistory(prev => {
+      const newHistory = [attempt, ...prev].slice(0, 20)
+      localStorage.setItem('muoiHistory', JSON.stringify(newHistory))
+      return newHistory
+    })
+  }, [view]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const exitQuiz = () => {
     setView('SUBTOPIC')
