@@ -1,0 +1,2553 @@
+{
+  "tiengviet": {
+    "label": "Tiếng Việt",
+    "emoji": "📖",
+    "color": "secondary",
+    "subtopics": {
+      "dochieu": {
+        "label": "Đọc hiểu",
+        "emoji": "📚",
+        "questions": [
+          {
+            "id": "dh1",
+            "question": "Truyện 'Món quà hạnh phúc': Để nuôi đàn con, thỏ mẹ đã phải thế nào?",
+            "options": [
+              "Vui vẻ chơi đùa",
+              "Ngủ cả ngày",
+              "Vất vả làm lụng suốt ngày",
+              "Đi du lịch"
+            ],
+            "correct": "Vất vả làm lụng suốt ngày"
+          },
+          {
+            "id": "dh2",
+            "question": "Truyện 'Món quà hạnh phúc': Bầy thỏ chuẩn bị món quà gì tặng mẹ?",
+            "options": [
+              "Một bữa ăn ngon",
+              "Một chiếc khăn trải bàn",
+              "Một bó hoa đẹp",
+              "Một cái mũ"
+            ],
+            "correct": "Một chiếc khăn trải bàn"
+          },
+          {
+            "id": "dh3",
+            "question": "Truyện 'Món quà hạnh phúc': Thỏ mẹ cảm thấy thế nào khi nhận quà?",
+            "options": [
+              "Cảm động, hạnh phúc",
+              "Mệt nhọc",
+              "Buồn chán",
+              "Giận dữ"
+            ],
+            "correct": "Cảm động, hạnh phúc"
+          },
+          {
+            "id": "dh4",
+            "question": "Truyện 'Món quà hạnh phúc': Lời chúc bầy thỏ thêu trên khăn là gì?",
+            "options": [
+              "Chúc mẹ giàu sang phú quý",
+              "Kính chúc mẹ vui vẻ, mạnh khỏe",
+              "Mẹ ơi con yêu mẹ",
+              "Chúc mẹ ngủ ngon"
+            ],
+            "correct": "Kính chúc mẹ vui vẻ, mạnh khỏe"
+          },
+          {
+            "id": "dh5",
+            "question": "Bài học từ truyện 'Món quà hạnh phúc' là gì?",
+            "options": [
+              "Phải tặng mẹ những món quà đắt tiền",
+              "Mẹ phải làm mọi việc cho con",
+              "Biết ơn, thương yêu mẹ từ những hành động nhỏ",
+              "Phải chăm chỉ học hành"
+            ],
+            "correct": "Biết ơn, thương yêu mẹ từ những hành động nhỏ"
+          },
+          {
+            "id": "dh6",
+            "question": "Truyện 'Tay Phải và Tay Trái': Tay Phải tị nạnh điều gì với Tay Trái?",
+            "options": [
+              "Tay Trái đẹp hơn",
+              "Tay Trái không phải làm việc nặng nhọc",
+              "Tay Trái khéo léo hơn",
+              "Tay Trái được khen nhiều hơn"
+            ],
+            "correct": "Tay Trái không phải làm việc nặng nhọc"
+          },
+          {
+            "id": "dh7",
+            "question": "Truyện 'Tay Phải và Tay Trái': Khi Tay Trái không làm gì nữa, con người thế nào?",
+            "options": [
+              "Vẫn làm việc bình thường",
+              "Làm mọi việc khó khăn hơn",
+              "Khoẻ mạnh hơn",
+              "Vui vẻ hơn"
+            ],
+            "correct": "Làm mọi việc khó khăn hơn"
+          },
+          {
+            "id": "dh8",
+            "question": "Truyện 'Tay Phải và Tay Trái': Vì sao Tay Phải xin lỗi Tay Trái?",
+            "options": [
+              "Vì Tay Trái dọa nghỉ chơi",
+              "Vì thấy thiếu Tay Trái thì không làm gì được",
+              "Vì mẹ bảo phải xin lỗi",
+              "Vì Tay Phải bị đau"
+            ],
+            "correct": "Vì thấy thiếu Tay Trái thì không làm gì được"
+          },
+          {
+            "id": "dh9",
+            "question": "Bài học từ truyện 'Tay Phải và Tay Trái' là gì?",
+            "options": [
+              "Phải biết đoàn kết, hợp tác và giúp đỡ lẫn nhau",
+              "Phải tự làm mọi thứ một mình",
+              "Tay nào cũng quan trọng như nhau",
+              "Không nên cãi nhau"
+            ],
+            "correct": "Phải biết đoàn kết, hợp tác và giúp đỡ lẫn nhau"
+          },
+          {
+            "id": "dh10",
+            "question": "Bài 'Bàn tay cô giáo': Bàn tay cô đã làm gì cho bạn nhỏ?",
+            "options": [
+              "Tết tóc, vá áo, nắn nét chữ",
+              "Nấu cơm, rửa bát",
+              "Giặt áo, phơi đồ",
+              "Dắt đi chơi công viên"
+            ],
+            "correct": "Tết tóc, vá áo, nắn nét chữ"
+          },
+          {
+            "id": "dh11",
+            "question": "Bài 'Bàn tay cô giáo': Bàn tay cô được ví như tay của ai?",
+            "options": [
+              "Tay bố",
+              "Tay anh trai",
+              "Tay chị cả, tay mẹ hiền",
+              "Tay bà ngoại"
+            ],
+            "correct": "Tay chị cả, tay mẹ hiền"
+          },
+          {
+            "id": "dh12",
+            "question": "Bài 'Bàn tay cô giáo' miêu tả tay cô giáo như thế nào?",
+            "options": [
+              "Vụng về, lóng ngóng",
+              "Khéo léo, dịu dàng",
+              "Mạnh mẽ, cứng cáp",
+              "Lạnh lùng, xa cách"
+            ],
+            "correct": "Khéo léo, dịu dàng"
+          },
+          {
+            "id": "dh13",
+            "question": "Bài thơ 'Lời của cây': Khi chưa gieo xuống đất, hạt cây thế nào?",
+            "options": [
+              "Lặng thinh",
+              "Hát véo von",
+              "Chạy nhảy",
+              "Khóc lóc"
+            ],
+            "correct": "Lặng thinh"
+          },
+          {
+            "id": "dh14",
+            "question": "Bài thơ 'Lời của cây' cho thấy mầm cây giống ai?",
+            "options": [
+              "Người khổng lồ",
+              "Em bé đang lớn",
+              "Bà cụ",
+              "Chú chó con"
+            ],
+            "correct": "Em bé đang lớn"
+          },
+          {
+            "id": "dh15",
+            "question": "Bài 'Lời của cây' muốn nhắc chúng ta điều gì?",
+            "options": [
+              "Phải biết yêu quý và bảo vệ cây xanh",
+              "Cây nào cũng giống nhau",
+              "Không nên trồng cây",
+              "Cây có thể nói chuyện"
+            ],
+            "correct": "Phải biết yêu quý và bảo vệ cây xanh"
+          },
+          {
+            "id": "dh16",
+            "question": "Bài thơ 'Mẹ': Tiếng 'à ơi' trong bài là tiếng của ai?",
+            "options": [
+              "Lời mẹ ru con",
+              "Tiếng chim hót",
+              "Tiếng gió thổi",
+              "Tiếng ve kêu"
+            ],
+            "correct": "Lời mẹ ru con"
+          },
+          {
+            "id": "dh17",
+            "question": "Bài thơ 'Mẹ': Mẹ được ví như điều gì của con suốt đời?",
+            "options": [
+              "Ngôi sao",
+              "Tiếng võng",
+              "Ngọn gió",
+              "Trái đất"
+            ],
+            "correct": "Ngọn gió"
+          },
+          {
+            "id": "dh18",
+            "question": "Ý nghĩa sâu sắc nhất của bài thơ 'Mẹ' là gì?",
+            "options": [
+              "Kể về mùa hè nóng nực",
+              "Tả tiếng ve kêu",
+              "Ca ngợi tình yêu thương và sự hy sinh thầm lặng của mẹ",
+              "Nói về việc đi ngủ"
+            ],
+            "correct": "Ca ngợi tình yêu thương và sự hy sinh thầm lặng của mẹ"
+          },
+          {
+            "id": "dh19",
+            "question": "Bài 'Bình minh trong vườn': Âm thanh gì làm bạn nhỏ tỉnh giấc?",
+            "options": [
+              "Tiếng gà gáy",
+              "Tiếng chim hót véo von",
+              "Tiếng mưa rơi",
+              "Tiếng cành cây gãy"
+            ],
+            "correct": "Tiếng chim hót véo von"
+          },
+          {
+            "id": "dh20",
+            "question": "Bài 'Bình minh trong vườn': Tiếng chim hót được tả như thế nào?",
+            "options": [
+              "Ầm ĩ, khó chịu",
+              "Trong trẻo, ngây thơ",
+              "Buồn bã, da diết",
+              "To như sấm"
+            ],
+            "correct": "Trong trẻo, ngây thơ"
+          },
+          {
+            "id": "dh21",
+            "question": "Trong câu chuyện 'Món quà hạnh phúc', ai là người làm việc vất vả?",
+            "options": [
+              "Bầy thỏ con",
+              "Thỏ mẹ",
+              "Bác hàng xóm",
+              "Bố thỏ"
+            ],
+            "correct": "Thỏ mẹ"
+          },
+          {
+            "id": "dh22",
+            "question": "Bài thơ 'Lời của cây' nhắc đến điều gì?",
+            "options": [
+              "Cuộc sống lớn lên của một mầm cây",
+              "Cách trồng lúa",
+              "Cách nấu ăn",
+              "Cách chăm em bé"
+            ],
+            "correct": "Cuộc sống lớn lên của một mầm cây"
+          },
+          {
+            "id": "dh23",
+            "question": "Trong bài 'Tay Phải và Tay Trái', hai bàn tay tượng trưng cho điều gì?",
+            "options": [
+              "Sự ganh đua",
+              "Sự lười biếng",
+              "Sự hợp tác và đoàn kết trong cuộc sống",
+              "Sự cô đơn"
+            ],
+            "correct": "Sự hợp tác và đoàn kết trong cuộc sống"
+          },
+          {
+            "id": "dh24",
+            "question": "Khi đọc bài thơ 'Mẹ', em cảm thấy thế nào với mẹ của mình?",
+            "options": [
+              "Sợ hãi",
+              "Yêu thương và biết ơn",
+              "Bình thường",
+              "Ghét bỏ"
+            ],
+            "correct": "Yêu thương và biết ơn"
+          }
+        ]
+      },
+      "luyentu": {
+        "label": "Luyện từ và câu",
+        "emoji": "✍️",
+        "questions": [
+          {
+            "id": "lt1",
+            "question": "Sắp xếp thành câu đúng: trái đất / là / cây xanh / của / lá phổi xanh",
+            "options": [
+              "Cây xanh của trái đất là lá phổi xanh.",
+              "Cây xanh là lá phổi xanh của trái đất.",
+              "Trái đất là lá phổi xanh của cây xanh.",
+              "Lá phổi xanh là trái đất của cây xanh."
+            ],
+            "correct": "Cây xanh là lá phổi xanh của trái đất."
+          },
+          {
+            "id": "lt2",
+            "question": "Từ nào phù hợp với hình ảnh các chú bộ đội đi trong rừng?",
+            "options": [
+              "Hành quân",
+              "Nghỉ ngơi",
+              "Múa hát",
+              "Nhảy dây"
+            ],
+            "correct": "Hành quân"
+          },
+          {
+            "id": "lt3",
+            "question": "Những chùm quả chín mọng thì có mùi gì?",
+            "options": [
+              "Thơm ngát",
+              "Thơm lừng",
+              "Thơm tho",
+              "Hôi rình"
+            ],
+            "correct": "Thơm lừng"
+          },
+          {
+            "id": "lt4",
+            "question": "Trên mặt đầm, hoa sen nở thế nào?",
+            "options": [
+              "Thơm ngát",
+              "Thơm lừng",
+              "Thơm tho",
+              "Hôi rình"
+            ],
+            "correct": "Thơm ngát"
+          },
+          {
+            "id": "lt5",
+            "question": "Trong rừng, ___ trầm và hương hoa thơm ngát.",
+            "options": [
+              "mùi hương",
+              "tiếng chim",
+              "ánh nắng",
+              "cơn gió"
+            ],
+            "correct": "mùi hương"
+          },
+          {
+            "id": "lt6",
+            "question": "Nối câu: Hoa đào lộng lẫy ___",
+            "options": [
+              "...mà e thẹn trong chiếc váy hồng.",
+              "...rủ nhau về tụ họp.",
+              "...giúp cơ thể khỏe mạnh.",
+              "...bay sang biển cả mênh mông."
+            ],
+            "correct": "...mà e thẹn trong chiếc váy hồng."
+          },
+          {
+            "id": "lt7",
+            "question": "Nối câu: Chim chóc khắp bốn phương ___",
+            "options": [
+              "...mà e thẹn trong chiếc váy hồng.",
+              "...rủ nhau về tụ họp.",
+              "...giúp cơ thể khỏe mạnh.",
+              "...sai trĩu quả."
+            ],
+            "correct": "...rủ nhau về tụ họp."
+          },
+          {
+            "id": "lt8",
+            "question": "Nối câu: Tập thể dục thường xuyên ___",
+            "options": [
+              "...giúp cơ thể khỏe mạnh.",
+              "...rủ nhau về tụ họp.",
+              "...mà e thẹn trong chiếc váy hồng.",
+              "...sai trĩu quả."
+            ],
+            "correct": "...giúp cơ thể khỏe mạnh."
+          },
+          {
+            "id": "lt9",
+            "question": "Nối câu: Giọt sương ___",
+            "options": [
+              "...long lanh đọng trên lá.",
+              "...nằm sưởi nắng ở bậc thềm.",
+              "...làm món cá chiên rất ngon.",
+              "...có ba màu."
+            ],
+            "correct": "...long lanh đọng trên lá."
+          },
+          {
+            "id": "lt10",
+            "question": "Nối câu: Chú mèo ___",
+            "options": [
+              "...long lanh đọng trên lá.",
+              "...nằm dài sưởi nắng ở bậc thềm.",
+              "...thơm ngát cả khu vườn.",
+              "...có bộ lông óng mượt."
+            ],
+            "correct": "...nằm dài sưởi nắng ở bậc thềm."
+          },
+          {
+            "id": "lt11",
+            "question": "Nối câu: Hoa bưởi ___",
+            "options": [
+              "...long lanh đọng trên lá.",
+              "...thơm ngát cả khu vườn.",
+              "...có ba màu.",
+              "...là loài chim của biển cả."
+            ],
+            "correct": "...thơm ngát cả khu vườn."
+          },
+          {
+            "id": "lt12",
+            "question": "Nối câu: Đèn giao thông ___",
+            "options": [
+              "...có ba màu.",
+              "...thơm ngát cả khu vườn.",
+              "...long lanh đọng trên lá.",
+              "...có nhiều cảnh đẹp."
+            ],
+            "correct": "...có ba màu."
+          },
+          {
+            "id": "lt13",
+            "question": "Nối câu: Chim chích bông ___",
+            "options": [
+              "...có bộ lông óng mượt.",
+              "...có ba màu.",
+              "...sai trĩu quả.",
+              "...làm món cá chiên ngon."
+            ],
+            "correct": "...có bộ lông óng mượt."
+          },
+          {
+            "id": "lt14",
+            "question": "Nối câu: Việt Nam ___",
+            "options": [
+              "...có nhiều cảnh đẹp nổi tiếng.",
+              "...sai trĩu quả.",
+              "...nằm dài sưởi nắng.",
+              "...có ba màu."
+            ],
+            "correct": "...có nhiều cảnh đẹp nổi tiếng."
+          },
+          {
+            "id": "lt15",
+            "question": "Nối câu: Giàn nho nhà bà ___",
+            "options": [
+              "...sai trĩu quả.",
+              "...có ba màu.",
+              "...long lanh đọng trên lá.",
+              "...là loài chim của biển cả."
+            ],
+            "correct": "...sai trĩu quả."
+          },
+          {
+            "id": "lt16",
+            "question": "Nối câu: Hải âu ___",
+            "options": [
+              "...là loài chim của biển cả.",
+              "...có ba màu.",
+              "...sai trĩu quả.",
+              "...nằm sưởi nắng."
+            ],
+            "correct": "...là loài chim của biển cả."
+          },
+          {
+            "id": "lt17",
+            "question": "Nối câu: Chú chó đốm ___",
+            "options": [
+              "...ngoe nguẩy cái đuôi.",
+              "...thơm ngát cả khu vườn.",
+              "...có bộ lông óng mượt.",
+              "...long lanh đọng trên lá."
+            ],
+            "correct": "...ngoe nguẩy cái đuôi."
+          },
+          {
+            "id": "lt18",
+            "question": "Nối câu: Đường lên núi ___",
+            "options": [
+              "...quanh co, khúc khuỷu.",
+              "...long lanh đọng trên lá.",
+              "...có ba màu.",
+              "...sai trĩu quả."
+            ],
+            "correct": "...quanh co, khúc khuỷu."
+          },
+          {
+            "id": "lt19",
+            "question": "Sắp xếp thành câu: trĩu quả / nhà bà em / sai / giàn bầu",
+            "options": [
+              "Giàn bầu nhà bà em sai trĩu quả.",
+              "Nhà bà em sai trĩu quả giàn bầu.",
+              "Sai trĩu quả giàn bầu nhà bà em.",
+              "Trĩu quả nhà bà em giàn bầu sai."
+            ],
+            "correct": "Giàn bầu nhà bà em sai trĩu quả."
+          },
+          {
+            "id": "lt20",
+            "question": "Sắp xếp thành câu: dặn dò / cô giáo / học hành / chăm chỉ / chúng em",
+            "options": [
+              "Cô giáo dặn dò chúng em học hành chăm chỉ.",
+              "Chúng em dặn dò cô giáo học hành chăm chỉ.",
+              "Học hành chăm chỉ cô giáo dặn dò chúng em.",
+              "Cô giáo chăm chỉ dặn dò chúng em học hành."
+            ],
+            "correct": "Cô giáo dặn dò chúng em học hành chăm chỉ."
+          },
+          {
+            "id": "lt21",
+            "question": "Sắp xếp thành câu: lớp học / chúng em / gọn gàng / giữ gìn / sạch đẹp",
+            "options": [
+              "Chúng em giữ gìn lớp học gọn gàng sạch đẹp.",
+              "Lớp học chúng em gọn gàng giữ gìn sạch đẹp.",
+              "Sạch đẹp chúng em giữ gìn lớp học gọn gàng.",
+              "Giữ gìn chúng em lớp học gọn gàng sạch đẹp."
+            ],
+            "correct": "Chúng em giữ gìn lớp học gọn gàng sạch đẹp."
+          },
+          {
+            "id": "lt22",
+            "question": "Sắp xếp thành câu: trong / tiếng ve / râm ran / kêu / vòm lá",
+            "options": [
+              "Tiếng ve kêu râm ran trong vòm lá.",
+              "Trong vòm lá râm ran tiếng ve kêu.",
+              "Vòm lá tiếng ve kêu râm ran trong.",
+              "Râm ran tiếng ve trong vòm lá kêu."
+            ],
+            "correct": "Tiếng ve kêu râm ran trong vòm lá."
+          },
+          {
+            "id": "lt23",
+            "question": "Bà nội em ___ cổ tích rất hay.",
+            "options": [
+              "du lịch",
+              "kể chuyện",
+              "nảy lộc",
+              "nhảy múa"
+            ],
+            "correct": "kể chuyện"
+          },
+          {
+            "id": "lt24",
+            "question": "Mùa xuân, cây cối đâm chồi, ___, trăm hoa đua nở.",
+            "options": [
+              "du lịch",
+              "kể chuyện",
+              "nảy lộc",
+              "khô héo"
+            ],
+            "correct": "nảy lộc"
+          },
+          {
+            "id": "lt25",
+            "question": "Hè này, cả nhà Thương đi ___ Hàn Quốc.",
+            "options": [
+              "du lịch",
+              "kể chuyện",
+              "nảy lộc",
+              "nấu ăn"
+            ],
+            "correct": "du lịch"
+          },
+          {
+            "id": "lt26",
+            "question": "Từ nào chỉ hoạt động của chim?",
+            "options": [
+              "Bay",
+              "Bơi",
+              "Chạy",
+              "Trườn"
+            ],
+            "correct": "Bay"
+          },
+          {
+            "id": "lt27",
+            "question": "Từ nào chỉ tính cách tốt?",
+            "options": [
+              "Lười biếng",
+              "Chăm chỉ",
+              "Tham lam",
+              "Hung dữ"
+            ],
+            "correct": "Chăm chỉ"
+          }
+        ]
+      },
+      "chinhta": {
+        "label": "Chính tả",
+        "emoji": "🔤",
+        "questions": [
+          {
+            "id": "ct1",
+            "question": "Câu nào dưới đây viết ĐÚNG chính tả?",
+            "options": [
+              "Mùa xuân, hao đào nở rực dỡ.",
+              "Mùa xuân, hoa đào nở rực rỡ.",
+              "Mùa xuân, hoa dào nở rực rở.",
+              "Mùa xuâng, hoa đào nỡ rực rỡ."
+            ],
+            "correct": "Mùa xuân, hoa đào nở rực rỡ."
+          },
+          {
+            "id": "ct2",
+            "question": "Chọn từ viết SAI chính tả:",
+            "options": [
+              "Sừng sững",
+              "Khẳng khiu",
+              "Trụi lá",
+              "Truị nhóa"
+            ],
+            "correct": "Truị nhóa"
+          },
+          {
+            "id": "ct3",
+            "question": "Điền l hay n: Cây có thân màu ...âu.",
+            "options": [
+              "l",
+              "n",
+              "m",
+              "h"
+            ],
+            "correct": "n"
+          },
+          {
+            "id": "ct4",
+            "question": "Điền c, k hay q: ...ính yêu",
+            "options": [
+              "c",
+              "k",
+              "q",
+              "g"
+            ],
+            "correct": "k"
+          },
+          {
+            "id": "ct5",
+            "question": "Điền c, k hay q: ...ể chuyện",
+            "options": [
+              "c",
+              "k",
+              "q",
+              "g"
+            ],
+            "correct": "k"
+          },
+          {
+            "id": "ct6",
+            "question": "Điền c, k hay q: ...ây tre",
+            "options": [
+              "c",
+              "k",
+              "q",
+              "g"
+            ],
+            "correct": "c"
+          },
+          {
+            "id": "ct7",
+            "question": "Điền c, k hay q: lá cờ tổ ...uốc",
+            "options": [
+              "c",
+              "k",
+              "q",
+              "g"
+            ],
+            "correct": "q"
+          },
+          {
+            "id": "ct8",
+            "question": "Điền c, k hay q: vở ...ịch",
+            "options": [
+              "c",
+              "k",
+              "q",
+              "g"
+            ],
+            "correct": "k"
+          },
+          {
+            "id": "ct9",
+            "question": "Điền c, k hay q: bát ...ơm",
+            "options": [
+              "c",
+              "k",
+              "q",
+              "g"
+            ],
+            "correct": "c"
+          },
+          {
+            "id": "ct10",
+            "question": "Điền g hay gh: ...ế gỗ",
+            "options": [
+              "g",
+              "gh",
+              "k",
+              "ngh"
+            ],
+            "correct": "gh"
+          },
+          {
+            "id": "ct11",
+            "question": "Điền g hay gh: ...à ri",
+            "options": [
+              "g",
+              "gh",
+              "k",
+              "ngh"
+            ],
+            "correct": "g"
+          },
+          {
+            "id": "ct12",
+            "question": "Điền g hay gh: ...i nhớ",
+            "options": [
+              "g",
+              "gh",
+              "k",
+              "ngh"
+            ],
+            "correct": "gh"
+          },
+          {
+            "id": "ct13",
+            "question": "Điền g hay gh: nhà ...a",
+            "options": [
+              "g",
+              "gh",
+              "k",
+              "ngh"
+            ],
+            "correct": "g"
+          },
+          {
+            "id": "ct14",
+            "question": "Điền g hay gh: con ...ẹ",
+            "options": [
+              "g",
+              "gh",
+              "k",
+              "q"
+            ],
+            "correct": "gh"
+          },
+          {
+            "id": "ct15",
+            "question": "Điền ng hay ngh: củ ...ệ",
+            "options": [
+              "ng",
+              "ngh",
+              "g",
+              "gh"
+            ],
+            "correct": "ngh"
+          },
+          {
+            "id": "ct16",
+            "question": "Điền ng hay ngh: bắp ...ô",
+            "options": [
+              "ng",
+              "ngh",
+              "g",
+              "gh"
+            ],
+            "correct": "ng"
+          },
+          {
+            "id": "ct17",
+            "question": "Điền ng hay ngh: ...iêng ngả",
+            "options": [
+              "ng",
+              "ngh",
+              "g",
+              "gh"
+            ],
+            "correct": "ngh"
+          },
+          {
+            "id": "ct18",
+            "question": "Điền ng hay ngh: ...ày tháng",
+            "options": [
+              "ng",
+              "ngh",
+              "g",
+              "gh"
+            ],
+            "correct": "ng"
+          },
+          {
+            "id": "ct19",
+            "question": "Điền l hay n: quả ...a",
+            "options": [
+              "l",
+              "n",
+              "h",
+              "m"
+            ],
+            "correct": "n"
+          },
+          {
+            "id": "ct20",
+            "question": "Điền l hay n: ...ao động",
+            "options": [
+              "l",
+              "n",
+              "h",
+              "m"
+            ],
+            "correct": "l"
+          },
+          {
+            "id": "ct21",
+            "question": "Điền l hay n: bay ...ượn",
+            "options": [
+              "l",
+              "n",
+              "h",
+              "m"
+            ],
+            "correct": "l"
+          },
+          {
+            "id": "ct22",
+            "question": "Điền l hay n: cái ...ồi",
+            "options": [
+              "l",
+              "n",
+              "h",
+              "m"
+            ],
+            "correct": "n"
+          },
+          {
+            "id": "ct23",
+            "question": "Điền s hay x: ngôi ...ao",
+            "options": [
+              "s",
+              "x",
+              "ch",
+              "tr"
+            ],
+            "correct": "s"
+          },
+          {
+            "id": "ct24",
+            "question": "Điền s hay x: thợ ...ây",
+            "options": [
+              "s",
+              "x",
+              "ch",
+              "tr"
+            ],
+            "correct": "x"
+          },
+          {
+            "id": "ct25",
+            "question": "Điền s hay x: chim ...ẻ",
+            "options": [
+              "s",
+              "x",
+              "ch",
+              "tr"
+            ],
+            "correct": "s"
+          },
+          {
+            "id": "ct26",
+            "question": "Điền s hay x: nhỏ ...íu",
+            "options": [
+              "s",
+              "x",
+              "ch",
+              "tr"
+            ],
+            "correct": "x"
+          },
+          {
+            "id": "ct27",
+            "question": "Điền ch hay tr: ...ường học",
+            "options": [
+              "ch",
+              "tr",
+              "th",
+              "kh"
+            ],
+            "correct": "tr"
+          },
+          {
+            "id": "ct28",
+            "question": "Điền ch hay tr: ...ăm chỉ",
+            "options": [
+              "ch",
+              "tr",
+              "th",
+              "kh"
+            ],
+            "correct": "ch"
+          },
+          {
+            "id": "ct29",
+            "question": "Điền ch hay tr: bánh ...ưng",
+            "options": [
+              "ch",
+              "tr",
+              "th",
+              "kh"
+            ],
+            "correct": "ch"
+          },
+          {
+            "id": "ct30",
+            "question": "Điền ch hay tr: vầng ...ăng",
+            "options": [
+              "ch",
+              "tr",
+              "th",
+              "kh"
+            ],
+            "correct": "tr"
+          },
+          {
+            "id": "ct31",
+            "question": "Điền d, r hay gi: ...a đình",
+            "options": [
+              "d",
+              "r",
+              "gi",
+              "ng"
+            ],
+            "correct": "gi"
+          },
+          {
+            "id": "ct32",
+            "question": "Điền d, r hay gi: ...òng sông",
+            "options": [
+              "d",
+              "r",
+              "gi",
+              "ng"
+            ],
+            "correct": "d"
+          },
+          {
+            "id": "ct33",
+            "question": "Điền d, r hay gi: cơn ...ó",
+            "options": [
+              "d",
+              "r",
+              "gi",
+              "ng"
+            ],
+            "correct": "gi"
+          },
+          {
+            "id": "ct34",
+            "question": "Điền d, r hay gi: ...ì rào",
+            "options": [
+              "d",
+              "r",
+              "gi",
+              "ng"
+            ],
+            "correct": "r"
+          },
+          {
+            "id": "ct35",
+            "question": "Điền vần ai hay ay: số h___",
+            "options": [
+              "ai",
+              "ay",
+              "ây",
+              "âi"
+            ],
+            "correct": "ai"
+          },
+          {
+            "id": "ct36",
+            "question": "Điền vần ai hay ay: bàn t___",
+            "options": [
+              "ai",
+              "ay",
+              "ây",
+              "âi"
+            ],
+            "correct": "ay"
+          },
+          {
+            "id": "ct37",
+            "question": "Điền vần ai hay ay: gà m___",
+            "options": [
+              "ai",
+              "ay",
+              "ây",
+              "âi"
+            ],
+            "correct": "ai"
+          },
+          {
+            "id": "ct38",
+            "question": "Điền vần ai hay ay: b___ lượn",
+            "options": [
+              "ai",
+              "ay",
+              "ây",
+              "âi"
+            ],
+            "correct": "ay"
+          },
+          {
+            "id": "ct39",
+            "question": "Điền vần uôt hay uôc: con ch___",
+            "options": [
+              "uôt",
+              "uôc",
+              "uông",
+              "uôm"
+            ],
+            "correct": "uôt"
+          },
+          {
+            "id": "ct40",
+            "question": "Điền vần uôt hay uôc: ngọn đ___",
+            "options": [
+              "uôt",
+              "uôc",
+              "uông",
+              "uôm"
+            ],
+            "correct": "uôc"
+          },
+          {
+            "id": "ct41",
+            "question": "Điền vần uôt hay uôc: lạnh b___",
+            "options": [
+              "uôt",
+              "uôc",
+              "uông",
+              "uôm"
+            ],
+            "correct": "uôt"
+          },
+          {
+            "id": "ct42",
+            "question": "Điền vần uôt hay uôc: vị th___",
+            "options": [
+              "uôt",
+              "uôc",
+              "uông",
+              "uôm"
+            ],
+            "correct": "uôc"
+          },
+          {
+            "id": "ct43",
+            "question": "Chọn từ viết ĐÚNG chính tả:",
+            "options": [
+              "xửa chữa",
+              "sửa chữa",
+              "sửa trữa",
+              "xửa trữa"
+            ],
+            "correct": "sửa chữa"
+          },
+          {
+            "id": "ct44",
+            "question": "Chọn từ viết ĐÚNG chính tả:",
+            "options": [
+              "nhải dây",
+              "nhảy dây",
+              "nhải giây",
+              "nhảy giây"
+            ],
+            "correct": "nhảy dây"
+          },
+          {
+            "id": "ct45",
+            "question": "Chọn từ viết ĐÚNG chính tả:",
+            "options": [
+              "nghủ ngê",
+              "ngủ nghê",
+              "ngủ ngê",
+              "nghủ nghê"
+            ],
+            "correct": "ngủ nghê"
+          },
+          {
+            "id": "ct46",
+            "question": "Chọn từ viết ĐÚNG chính tả:",
+            "options": [
+              "thước cẻ",
+              "thước kẻ",
+              "thướt kẻ",
+              "thướt cẻ"
+            ],
+            "correct": "thước kẻ"
+          },
+          {
+            "id": "ct47",
+            "question": "Chọn từ viết ĐÚNG chính tả:",
+            "options": [
+              "xa sôi",
+              "xa xôi",
+              "sa xôi",
+              "sa sôi"
+            ],
+            "correct": "xa xôi"
+          },
+          {
+            "id": "ct48",
+            "question": "Chọn câu viết ĐÚNG chính tả:",
+            "options": [
+              "Quả mýt trín thơm nừng.",
+              "Quả mít chín thơm lừng.",
+              "Quả mít chín thơm nừng.",
+              "Quả mýt chín thơm lừng."
+            ],
+            "correct": "Quả mít chín thơm lừng."
+          },
+          {
+            "id": "ct49",
+            "question": "Tiếng nào có dấu ngã?",
+            "options": [
+              "nghỉ ngơi",
+              "suy nghĩ",
+              "số lẻ",
+              "tổ quốc"
+            ],
+            "correct": "suy nghĩ"
+          },
+          {
+            "id": "ct50",
+            "question": "Chọn câu viết ĐÚNG chính tả:",
+            "options": [
+              "Giữa chưa hè, chời lóng như thiêu.",
+              "Giữa trưa hè, trời nóng như thiêu.",
+              "Giữa trưa hè, chời nóng như thiêu.",
+              "Giữa chưa hè, trời lóng như thiêu."
+            ],
+            "correct": "Giữa trưa hè, trời nóng như thiêu."
+          }
+        ]
+      }
+    }
+  },
+  "toan": {
+    "label": "Toán học",
+    "emoji": "🔢",
+    "color": "primary",
+    "subtopics": {
+      "sohoc": {
+        "label": "Số học",
+        "emoji": "🧮",
+        "questions": [
+          {
+            "id": "sh1",
+            "question": "Số liền trước của 80 là số nào?",
+            "options": [
+              "79",
+              "81",
+              "70",
+              "89"
+            ],
+            "correct": "79"
+          },
+          {
+            "id": "sh2",
+            "question": "Số liền sau của 49 là số nào?",
+            "options": [
+              "48",
+              "50",
+              "94",
+              "40"
+            ],
+            "correct": "50"
+          },
+          {
+            "id": "sh3",
+            "question": "Số gồm 6 chục và 5 đơn vị là số nào?",
+            "options": [
+              "56",
+              "60",
+              "65",
+              "11"
+            ],
+            "correct": "65"
+          },
+          {
+            "id": "sh4",
+            "question": "Tính: 45 + 12 = ?",
+            "options": [
+              "47",
+              "57",
+              "67",
+              "52"
+            ],
+            "correct": "57"
+          },
+          {
+            "id": "sh5",
+            "question": "Tính: 98 - 34 = ?",
+            "options": [
+              "64",
+              "54",
+              "44",
+              "68"
+            ],
+            "correct": "64"
+          },
+          {
+            "id": "sh6",
+            "question": "Điền dấu thích hợp: 67 ___ 76",
+            "options": [
+              ">",
+              "<",
+              "=",
+              "+"
+            ],
+            "correct": "<"
+          },
+          {
+            "id": "sh7",
+            "question": "Dãy số nào toàn là số tròn chục?",
+            "options": [
+              "10, 20, 31, 40",
+              "10, 20, 30, 40",
+              "5, 10, 15, 20",
+              "20, 22, 24, 26"
+            ],
+            "correct": "10, 20, 30, 40"
+          },
+          {
+            "id": "sh8",
+            "question": "Số 84 gồm:",
+            "options": [
+              "8 đơn vị và 4 chục",
+              "4 đơn vị và 8 chục",
+              "8 đơn vị và 8 chục",
+              "4 đơn vị và 4 chục"
+            ],
+            "correct": "4 đơn vị và 8 chục"
+          },
+          {
+            "id": "sh9",
+            "question": "Số liền sau của 36 là số nào?",
+            "options": [
+              "35",
+              "37",
+              "63",
+              "30"
+            ],
+            "correct": "37"
+          },
+          {
+            "id": "sh10",
+            "question": "Số 55 đọc là:",
+            "options": [
+              "Năm mươi năm",
+              "Lăm mươi lăm",
+              "Năm mươi lăm",
+              "Năm năm"
+            ],
+            "correct": "Năm mươi lăm"
+          },
+          {
+            "id": "sh11",
+            "question": "Có bao nhiêu số có hai chữ số giống nhau (từ 11 đến 99)?",
+            "options": [
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "correct": "9"
+          },
+          {
+            "id": "sh12",
+            "question": "Viết số gồm 0 đơn vị và 4 chục:",
+            "options": [
+              "4",
+              "40",
+              "44",
+              "400"
+            ],
+            "correct": "40"
+          },
+          {
+            "id": "sh13",
+            "question": "Tìm số có chữ số hàng đơn vị là 3, chữ số hàng chục lớn hơn hàng đơn vị 4 đơn vị:",
+            "options": [
+              "43",
+              "73",
+              "37",
+              "34"
+            ],
+            "correct": "73"
+          },
+          {
+            "id": "sh14",
+            "question": "Số liền trước của 35 là số nào?",
+            "options": [
+              "34",
+              "36",
+              "30",
+              "53"
+            ],
+            "correct": "34"
+          },
+          {
+            "id": "sh15",
+            "question": "Vinh có số bút chì màu bằng số tròn chục liền sau số 35. Vinh có bao nhiêu chiếc bút?",
+            "options": [
+              "30 chiếc",
+              "35 chiếc",
+              "40 chiếc",
+              "45 chiếc"
+            ],
+            "correct": "40 chiếc"
+          },
+          {
+            "id": "sh16",
+            "question": "Điền số còn thiếu: 59; 57; ___; 53; 51; 49.",
+            "options": [
+              "54",
+              "55",
+              "56",
+              "58"
+            ],
+            "correct": "55"
+          },
+          {
+            "id": "sh17",
+            "question": "Không tính kết quả, điền dấu: 45 + 12 ___ 45 + 13",
+            "options": [
+              ">",
+              "<",
+              "=",
+              "+"
+            ],
+            "correct": "<"
+          },
+          {
+            "id": "sh18",
+            "question": "Điền số thích hợp: 12 < ___ < 14",
+            "options": [
+              "11",
+              "12",
+              "13",
+              "14"
+            ],
+            "correct": "13"
+          },
+          {
+            "id": "sh19",
+            "question": "Điền dấu phép tính: 28 ___ 6 = 22",
+            "options": [
+              "+",
+              "-",
+              ">",
+              "<"
+            ],
+            "correct": "-"
+          },
+          {
+            "id": "sh20",
+            "question": "Tính: 56 + 12 = ?",
+            "options": [
+              "66",
+              "67",
+              "68",
+              "78"
+            ],
+            "correct": "68"
+          },
+          {
+            "id": "sh21",
+            "question": "Tính: 97 - 5 = ?",
+            "options": [
+              "91",
+              "92",
+              "93",
+              "82"
+            ],
+            "correct": "92"
+          },
+          {
+            "id": "sh22",
+            "question": "Điền dấu: 35 + 21 ___ 35 + 24",
+            "options": [
+              ">",
+              "<",
+              "=",
+              "+"
+            ],
+            "correct": "<"
+          },
+          {
+            "id": "sh23",
+            "question": "Điền dấu: 22cm + 31cm ___ 23cm + 30cm",
+            "options": [
+              ">",
+              "<",
+              "=",
+              "+"
+            ],
+            "correct": "="
+          },
+          {
+            "id": "sh24",
+            "question": "Tính: 44 + 23 = ?",
+            "options": [
+              "66",
+              "67",
+              "68",
+              "77"
+            ],
+            "correct": "67"
+          },
+          {
+            "id": "sh25",
+            "question": "Tính: 75 - 24 = ?",
+            "options": [
+              "41",
+              "51",
+              "52",
+              "61"
+            ],
+            "correct": "51"
+          },
+          {
+            "id": "sh26",
+            "question": "Tính: 95 - 33 = ?",
+            "options": [
+              "52",
+              "61",
+              "62",
+              "72"
+            ],
+            "correct": "62"
+          },
+          {
+            "id": "sh27",
+            "question": "Số tròn chục lớn nhất có hai chữ số là số nào?",
+            "options": [
+              "80",
+              "90",
+              "99",
+              "100"
+            ],
+            "correct": "90"
+          },
+          {
+            "id": "sh28",
+            "question": "Số bé nhất có hai chữ số là số nào?",
+            "options": [
+              "1",
+              "10",
+              "11",
+              "20"
+            ],
+            "correct": "10"
+          },
+          {
+            "id": "sh29",
+            "question": "Số chẵn liền sau số 18 là số nào?",
+            "options": [
+              "19",
+              "20",
+              "16",
+              "21"
+            ],
+            "correct": "20"
+          },
+          {
+            "id": "sh30",
+            "question": "Số lẻ liền trước số 35 là số nào?",
+            "options": [
+              "33",
+              "34",
+              "37",
+              "36"
+            ],
+            "correct": "33"
+          }
+        ]
+      },
+      "hinhhoc": {
+        "label": "Hình học & Đo lường",
+        "emoji": "📐",
+        "questions": [
+          {
+            "id": "hh1",
+            "question": "Cây số 1 cao 15cm. Cây số 2 thấp hơn cây số 1 5cm. Cây số 2 cao bao nhiêu?",
+            "options": [
+              "5 cm",
+              "10 cm",
+              "15 cm",
+              "20 cm"
+            ],
+            "correct": "10 cm"
+          },
+          {
+            "id": "hh2",
+            "question": "Cục tẩy đặt từ vạch 2cm đến vạch 5cm. Cục tẩy dài bao nhiêu?",
+            "options": [
+              "2 cm",
+              "3 cm",
+              "5 cm",
+              "7 cm"
+            ],
+            "correct": "3 cm"
+          },
+          {
+            "id": "hh3",
+            "question": "Hôm nay là thứ Sáu, ngày mùng 7. Thứ Ba của tuần đó là ngày bao nhiêu?",
+            "options": [
+              "Ngày 3",
+              "Ngày 4",
+              "Ngày 5",
+              "Ngày 6"
+            ],
+            "correct": "Ngày 4"
+          },
+          {
+            "id": "hh4",
+            "question": "Hôm qua là thứ Năm. Vậy ngày mai là thứ mấy?",
+            "options": [
+              "Thứ Sáu",
+              "Thứ Bảy",
+              "Chủ nhật",
+              "Thứ Hai"
+            ],
+            "correct": "Thứ Bảy"
+          },
+          {
+            "id": "hh5",
+            "question": "Hôm nay là thứ Sáu ngày 15. Hỏi ngày 20 là thứ mấy?",
+            "options": [
+              "Thứ Tư",
+              "Thứ Năm",
+              "Thứ Bảy",
+              "Chủ nhật"
+            ],
+            "correct": "Thứ Tư"
+          },
+          {
+            "id": "hh6",
+            "question": "Lan tan học lúc 4 giờ. Sau 3 giờ nữa Lan sẽ ăn tối. Mấy giờ Lan ăn tối?",
+            "options": [
+              "6 giờ",
+              "7 giờ",
+              "8 giờ",
+              "5 giờ"
+            ],
+            "correct": "7 giờ"
+          },
+          {
+            "id": "hh7",
+            "question": "Ô tô đến Thanh Hóa lúc 9 giờ, đã đi 3 giờ trước đó. Ô tô xuất phát lúc mấy giờ?",
+            "options": [
+              "6 giờ",
+              "8 giờ",
+              "10 giờ",
+              "12 giờ"
+            ],
+            "correct": "6 giờ"
+          },
+          {
+            "id": "hh8",
+            "question": "Có 10 bạn xếp hàng. Mai đứng thứ 2 từ trên xuống, An đứng thứ 3 từ cuối lên. Có bao nhiêu bạn đứng giữa Mai và An?",
+            "options": [
+              "3 bạn",
+              "4 bạn",
+              "5 bạn",
+              "6 bạn"
+            ],
+            "correct": "5 bạn"
+          },
+          {
+            "id": "hh9",
+            "question": "Thước của An không phải dài nhất. Thước của Ngân ngắn hơn thước của An. Thước của ai dài nhất?",
+            "options": [
+              "An",
+              "Ngân",
+              "Chi",
+              "Không xác định"
+            ],
+            "correct": "Chi"
+          },
+          {
+            "id": "hh10",
+            "question": "Khối lập phương có bao nhiêu mặt?",
+            "options": [
+              "4 mặt",
+              "5 mặt",
+              "6 mặt",
+              "8 mặt"
+            ],
+            "correct": "6 mặt"
+          },
+          {
+            "id": "hh11",
+            "question": "Mặt trước xúc xắc 4 chấm, mặt trên 1 chấm, mặt phải 5 chấm. Tổng số chấm 3 mặt?",
+            "options": [
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "correct": "10"
+          },
+          {
+            "id": "hh12",
+            "question": "Đồng hồ chỉ 3 giờ. Sau 2 giờ nữa là mấy giờ?",
+            "options": [
+              "4 giờ",
+              "5 giờ",
+              "6 giờ",
+              "1 giờ"
+            ],
+            "correct": "5 giờ"
+          },
+          {
+            "id": "hh13",
+            "question": "Một tuần có bao nhiêu ngày?",
+            "options": [
+              "5 ngày",
+              "6 ngày",
+              "7 ngày",
+              "10 ngày"
+            ],
+            "correct": "7 ngày"
+          },
+          {
+            "id": "hh14",
+            "question": "Tháng 1 có bao nhiêu ngày?",
+            "options": [
+              "28 ngày",
+              "30 ngày",
+              "31 ngày",
+              "29 ngày"
+            ],
+            "correct": "31 ngày"
+          },
+          {
+            "id": "hh15",
+            "question": "Hình tam giác có bao nhiêu cạnh?",
+            "options": [
+              "2 cạnh",
+              "3 cạnh",
+              "4 cạnh",
+              "5 cạnh"
+            ],
+            "correct": "3 cạnh"
+          },
+          {
+            "id": "hh16",
+            "question": "Hình chữ nhật có bao nhiêu cạnh?",
+            "options": [
+              "3 cạnh",
+              "4 cạnh",
+              "5 cạnh",
+              "6 cạnh"
+            ],
+            "correct": "4 cạnh"
+          },
+          {
+            "id": "hh17",
+            "question": "Hình vuông có bao nhiêu đỉnh?",
+            "options": [
+              "3 đỉnh",
+              "4 đỉnh",
+              "5 đỉnh",
+              "6 đỉnh"
+            ],
+            "correct": "4 đỉnh"
+          },
+          {
+            "id": "hh18",
+            "question": "Đơn vị dùng để đo cân nặng người là gì?",
+            "options": [
+              "cm",
+              "kg",
+              "ml",
+              "lít"
+            ],
+            "correct": "kg"
+          },
+          {
+            "id": "hh19",
+            "question": "Đơn vị thường dùng để đo độ dài cây bút?",
+            "options": [
+              "kg",
+              "lít",
+              "cm",
+              "giờ"
+            ],
+            "correct": "cm"
+          },
+          {
+            "id": "hh20",
+            "question": "Một sợi dây dài 1m bằng bao nhiêu cm?",
+            "options": [
+              "10 cm",
+              "100 cm",
+              "1000 cm",
+              "50 cm"
+            ],
+            "correct": "100 cm"
+          },
+          {
+            "id": "hh21",
+            "question": "Đồng hồ có kim ngắn ở số 9, kim dài ở số 12. Đồng hồ chỉ mấy giờ?",
+            "options": [
+              "12 giờ",
+              "9 giờ",
+              "3 giờ",
+              "6 giờ"
+            ],
+            "correct": "9 giờ"
+          },
+          {
+            "id": "hh22",
+            "question": "Sau thứ Bảy là thứ mấy?",
+            "options": [
+              "Thứ Sáu",
+              "Chủ nhật",
+              "Thứ Hai",
+              "Thứ Ba"
+            ],
+            "correct": "Chủ nhật"
+          },
+          {
+            "id": "hh23",
+            "question": "Trang ngồi bên trái tất cả. Lan ngồi bên phải Hoa và Hà. Hoa không ngồi cạnh Lan. Ai ngồi giữa Lan và Hoa?",
+            "options": [
+              "Trang",
+              "Hoa",
+              "Lan",
+              "Hà"
+            ],
+            "correct": "Hà"
+          },
+          {
+            "id": "hh24",
+            "question": "Có 4 hình tam giác và 2 hình tròn. Tổng số hình là bao nhiêu?",
+            "options": [
+              "4 hình",
+              "5 hình",
+              "6 hình",
+              "8 hình"
+            ],
+            "correct": "6 hình"
+          },
+          {
+            "id": "hh25",
+            "question": "Khối hộp chữ nhật có bao nhiêu mặt?",
+            "options": [
+              "4 mặt",
+              "5 mặt",
+              "6 mặt",
+              "8 mặt"
+            ],
+            "correct": "6 mặt"
+          },
+          {
+            "id": "hh26",
+            "question": "Hình bên có bao nhiêu hình tam giác?",
+            "image": "/images/g2_tri_left.jpg",
+            "options": [
+              "2 hình tam giác",
+              "3 hình tam giác",
+              "4 hình tam giác",
+              "5 hình tam giác"
+            ],
+            "correct": "3 hình tam giác"
+          },
+          {
+            "id": "hh27",
+            "question": "Hình bên (hình chóp có 2 đường thẳng đứng) có bao nhiêu hình tam giác?",
+            "image": "/images/g2_tri_right.jpg",
+            "options": [
+              "2 hình tam giác",
+              "3 hình tam giác",
+              "4 hình tam giác",
+              "5 hình tam giác"
+            ],
+            "correct": "3 hình tam giác"
+          },
+          {
+            "id": "hh28",
+            "question": "Hình bên có bao nhiêu hình chữ nhật?",
+            "image": "/images/g2_rect3col.jpg",
+            "options": [
+              "3 hình chữ nhật",
+              "4 hình chữ nhật",
+              "5 hình chữ nhật",
+              "6 hình chữ nhật"
+            ],
+            "correct": "6 hình chữ nhật"
+          },
+          {
+            "id": "hh29",
+            "question": "Hình bên có bao nhiêu hình chữ nhật (kể cả hình ghép)?",
+            "image": "/images/g2_rect_overlap.jpg",
+            "options": [
+              "4 hình chữ nhật",
+              "5 hình chữ nhật",
+              "6 hình chữ nhật",
+              "7 hình chữ nhật"
+            ],
+            "correct": "5 hình chữ nhật"
+          },
+          {
+            "id": "hh30",
+            "question": "Đồng hồ thứ nhất chỉ mấy giờ?",
+            "image": "/images/g5_clocks.jpg",
+            "options": [
+              "6 giờ",
+              "7 giờ",
+              "8 giờ",
+              "9 giờ"
+            ],
+            "correct": "9 giờ"
+          },
+          {
+            "id": "hh31",
+            "question": "Đồng hồ thứ hai chỉ mấy giờ?",
+            "image": "/images/g5_clocks.jpg",
+            "options": [
+              "4 giờ",
+              "5 giờ",
+              "6 giờ",
+              "7 giờ"
+            ],
+            "correct": "6 giờ"
+          },
+          {
+            "id": "hh32",
+            "question": "Trong hàng thú, con vật nào đứng ở vị trí thứ nhất (từ trái sang)?",
+            "image": "/images/g8_animals.jpg",
+            "options": [
+              "Sư tử",
+              "Voi",
+              "Thỏ",
+              "Mèo"
+            ],
+            "correct": "Thỏ"
+          },
+          {
+            "id": "hh33",
+            "question": "Con vật nào đứng ở vị trí thứ tư trong hàng (từ trái sang)?",
+            "image": "/images/g8_animals.jpg",
+            "options": [
+              "Thỏ",
+              "Sư tử",
+              "Chó",
+              "Mèo"
+            ],
+            "correct": "Mèo"
+          },
+          {
+            "id": "hh34",
+            "question": "Con chó đứng ở vị trí thứ mấy trong hàng (từ trái sang)?",
+            "image": "/images/g8_animals.jpg",
+            "options": [
+              "Thứ hai",
+              "Thứ ba",
+              "Thứ tư",
+              "Thứ năm"
+            ],
+            "correct": "Thứ năm"
+          },
+          {
+            "id": "hh35",
+            "question": "Có bao nhiêu con vật trong hàng?",
+            "image": "/images/g8_animals.jpg",
+            "options": [
+              "3 con",
+              "4 con",
+              "5 con",
+              "6 con"
+            ],
+            "correct": "5 con"
+          },
+          {
+            "id": "hh36",
+            "question": "Hình nào là khối cầu trong các hình sau?",
+            "image": "/images/g3_3d_objects.jpg",
+            "options": [
+              "Hình A",
+              "Hình B",
+              "Hình C",
+              "Hình D"
+            ],
+            "correct": "Hình A"
+          },
+          {
+            "id": "hh37",
+            "question": "Đếm số khối lập phương trong hình xếp bậc thang.",
+            "image": "/images/g3_cube_count.jpg",
+            "options": [
+              "8 khối",
+              "10 khối",
+              "12 khối",
+              "14 khối"
+            ],
+            "correct": "10 khối"
+          }
+        ]
+      },
+      "loivan": {
+        "label": "Toán có lời văn",
+        "emoji": "📝",
+        "questions": [
+          {
+            "id": "lv1",
+            "question": "My có 18 quả cam. Mẹ cho thêm 11 quả. Hỏi My có tất cả bao nhiêu quả cam?",
+            "options": [
+              "29 quả",
+              "7 quả",
+              "19 quả",
+              "28 quả"
+            ],
+            "correct": "29 quả"
+          },
+          {
+            "id": "lv2",
+            "question": "Cô giáo có 6 cái bút chì, chia đều cho 3 bạn. Mỗi bạn nhận được bao nhiêu cái bút?",
+            "options": [
+              "6 cái bút",
+              "3 cái bút",
+              "2 cái bút",
+              "1 cái bút"
+            ],
+            "correct": "2 cái bút"
+          },
+          {
+            "id": "lv3",
+            "question": "Ngọc có 10 quyển vở. Cô giáo tặng thêm 12 quyển. Ngọc có tất cả bao nhiêu quyển vở?",
+            "options": [
+              "22 quyển vở",
+              "20 quyển vở",
+              "12 quyển vở",
+              "2 quyển vở"
+            ],
+            "correct": "22 quyển vở"
+          },
+          {
+            "id": "lv4",
+            "question": "Hùng có 25 viên bi. Hùng cho Nam 13 viên. Hỏi Hùng còn lại bao nhiêu viên bi?",
+            "options": [
+              "38 viên bi",
+              "12 viên bi",
+              "13 viên bi",
+              "22 viên bi"
+            ],
+            "correct": "12 viên bi"
+          },
+          {
+            "id": "lv5",
+            "question": "Tuấn có 2 tá bút chì gồm 2 màu, trong đó 11 bút xanh. Hỏi có bao nhiêu bút đỏ? (1 tá = 12)",
+            "options": [
+              "11 cái",
+              "24 cái",
+              "13 cái",
+              "9 cái"
+            ],
+            "correct": "13 cái"
+          },
+          {
+            "id": "lv6",
+            "question": "Sợi dây dài 98 cm. Lan cắt 2 lần, mỗi lần 2 chục cm. Sợi dây còn lại dài bao nhiêu?",
+            "options": [
+              "78 cm",
+              "58 cm",
+              "57 cm",
+              "40 cm"
+            ],
+            "correct": "58 cm"
+          },
+          {
+            "id": "lv7",
+            "question": "Cây nến dài 29 cm. Sau khi cháy còn lại 14 cm. Cây nến đã cháy bao nhiêu cm?",
+            "options": [
+              "13 cm",
+              "14 cm",
+              "15 cm",
+              "16 cm"
+            ],
+            "correct": "15 cm"
+          },
+          {
+            "id": "lv8",
+            "question": "Mẹ đi công tác 19 ngày. Mẹ đã đi được 1 tuần. Mẹ còn phải đi bao nhiêu ngày? (1 tuần = 7 ngày)",
+            "options": [
+              "10 ngày",
+              "11 ngày",
+              "12 ngày",
+              "13 ngày"
+            ],
+            "correct": "12 ngày"
+          },
+          {
+            "id": "lv9",
+            "question": "Nam đi du lịch 1 tuần 3 ngày, sau đó về quê 6 ngày. Tổng cộng bao nhiêu ngày?",
+            "options": [
+              "13 ngày",
+              "15 ngày",
+              "16 ngày",
+              "17 ngày"
+            ],
+            "correct": "16 ngày"
+          },
+          {
+            "id": "lv10",
+            "question": "Hoa cho Ly 4 cái kẹo, Hồng cho Ly 5 cái. Sau đó Ly có 19 cái. Lúc đầu Ly có bao nhiêu?",
+            "options": [
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "correct": "10"
+          },
+          {
+            "id": "lv11",
+            "question": "Năm nay Hùng 6 tuổi. Chị Hùng có tuổi bằng số bé nhất có 2 chữ số cộng 1. Tổng số tuổi 2 chị em?",
+            "options": [
+              "16",
+              "17",
+              "18",
+              "19"
+            ],
+            "correct": "17"
+          },
+          {
+            "id": "lv12",
+            "question": "Lớp có 24 bạn, vắng mặt 3 bạn. Có bao nhiêu bạn đến lớp?",
+            "options": [
+              "20 bạn",
+              "21 bạn",
+              "22 bạn",
+              "27 bạn"
+            ],
+            "correct": "21 bạn"
+          },
+          {
+            "id": "lv13",
+            "question": "Bố mua 35 quả táo, cho hàng xóm 12 quả. Bố còn bao nhiêu quả?",
+            "options": [
+              "20 quả",
+              "23 quả",
+              "24 quả",
+              "47 quả"
+            ],
+            "correct": "23 quả"
+          },
+          {
+            "id": "lv14",
+            "question": "An tiết kiệm 50 nghìn, tiêu hết 20 nghìn. An còn bao nhiêu?",
+            "options": [
+              "20 nghìn",
+              "30 nghìn",
+              "40 nghìn",
+              "70 nghìn"
+            ],
+            "correct": "30 nghìn"
+          },
+          {
+            "id": "lv15",
+            "question": "Trên cây có 18 con chim, bay đi 7 con. Còn lại bao nhiêu con?",
+            "options": [
+              "10 con",
+              "11 con",
+              "12 con",
+              "25 con"
+            ],
+            "correct": "11 con"
+          },
+          {
+            "id": "lv16",
+            "question": "Vườn có 25 cây cam và 14 cây quýt. Vườn có tất cả bao nhiêu cây?",
+            "options": [
+              "38 cây",
+              "39 cây",
+              "40 cây",
+              "11 cây"
+            ],
+            "correct": "39 cây"
+          },
+          {
+            "id": "lv17",
+            "question": "Mẹ làm 12 cái bánh, em ăn 3 cái, anh ăn 4 cái. Còn bao nhiêu cái?",
+            "options": [
+              "3 cái",
+              "4 cái",
+              "5 cái",
+              "6 cái"
+            ],
+            "correct": "5 cái"
+          },
+          {
+            "id": "lv18",
+            "question": "Quyển sách giá 22 nghìn, cây bút 13 nghìn. Mua cả hai hết bao nhiêu?",
+            "options": [
+              "33 nghìn",
+              "34 nghìn",
+              "35 nghìn",
+              "36 nghìn"
+            ],
+            "correct": "35 nghìn"
+          },
+          {
+            "id": "lv19",
+            "question": "Lớp có 32 bạn, trong đó 15 bạn nữ. Lớp có bao nhiêu bạn nam?",
+            "options": [
+              "17 bạn",
+              "16 bạn",
+              "15 bạn",
+              "47 bạn"
+            ],
+            "correct": "17 bạn"
+          },
+          {
+            "id": "lv20",
+            "question": "Bể có 40 con cá, vớt ra 13 con. Còn lại bao nhiêu con?",
+            "options": [
+              "27 con",
+              "26 con",
+              "53 con",
+              "33 con"
+            ],
+            "correct": "27 con"
+          },
+          {
+            "id": "lv21",
+            "question": "Tủ sách có 50 quyển, cho mượn 25 quyển. Còn lại bao nhiêu?",
+            "options": [
+              "20 quyển",
+              "25 quyển",
+              "30 quyển",
+              "75 quyển"
+            ],
+            "correct": "25 quyển"
+          },
+          {
+            "id": "lv22",
+            "question": "Hộp có 36 viên kẹo, chia đều cho 6 bạn. Mỗi bạn được bao nhiêu viên?",
+            "options": [
+              "5 viên",
+              "6 viên",
+              "7 viên",
+              "12 viên"
+            ],
+            "correct": "6 viên"
+          },
+          {
+            "id": "lv23",
+            "question": "Hà có 16 nhãn vở, mua thêm 14. Hà có tất cả bao nhiêu nhãn?",
+            "options": [
+              "20",
+              "28",
+              "29",
+              "30"
+            ],
+            "correct": "30"
+          },
+          {
+            "id": "lv24",
+            "question": "Đàn vịt có 45 con, bán đi 21 con. Còn lại bao nhiêu con?",
+            "options": [
+              "20 con",
+              "23 con",
+              "24 con",
+              "66 con"
+            ],
+            "correct": "24 con"
+          },
+          {
+            "id": "lv25",
+            "question": "Bố trồng 30 cây xoài và 27 cây mít. Bố trồng tất cả bao nhiêu cây?",
+            "options": [
+              "55",
+              "56",
+              "57",
+              "67"
+            ],
+            "correct": "57"
+          }
+        ]
+      },
+      "nangcao": {
+        "label": "Toán nâng cao",
+        "emoji": "🧩",
+        "questions": [
+          {
+            "id": "nc1",
+            "question": "Nhà em có 1 con chó và 2 con gà. Hỏi tất cả có bao nhiêu cái chân?",
+            "options": [
+              "6 cái",
+              "8 cái",
+              "3 cái",
+              "10 cái"
+            ],
+            "correct": "8 cái"
+          },
+          {
+            "id": "nc2",
+            "question": "Hoàn thành dãy số: 11; 13; 15; ___; 19; 21.",
+            "options": [
+              "16",
+              "17",
+              "18",
+              "20"
+            ],
+            "correct": "17"
+          },
+          {
+            "id": "nc3",
+            "question": "Biết: 🎅+🎅+🎅=9, 🎅+🍬=8, 🍬-🎄=3. Hỏi 🎅+🎄=?",
+            "options": [
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "correct": "5",
+            "image": "/images/am4_santa.jpg"
+          },
+          {
+            "id": "nc4",
+            "question": "Nhà Jenny ở tầng 3. Cầu thang giữa các tầng có 12 bậc. Jenny phải leo bao nhiêu bậc từ tầng 1 lên nhà?",
+            "options": [
+              "12 bậc",
+              "24 bậc",
+              "36 bậc",
+              "18 bậc"
+            ],
+            "correct": "24 bậc"
+          },
+          {
+            "id": "nc5",
+            "question": "Mary có 13 hoa: 5 hồng, còn lại tulip. Có 6 hoa trắng, còn lại đỏ. Có ít nhất bao nhiêu tulip đỏ?",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "correct": "2"
+          },
+          {
+            "id": "nc6",
+            "question": "An có 14 tẩy. Liên cho An thêm số bằng số liền trước số tẩy An có. Sau đó An cho em 2. An còn lại bao nhiêu?",
+            "options": [
+              "12",
+              "21",
+              "25",
+              "26"
+            ],
+            "correct": "25"
+          },
+          {
+            "id": "nc7",
+            "question": "Cô giáo cắt sợi dây thành 4 đoạn cần cắt mấy lần?",
+            "options": [
+              "2 lần",
+              "3 lần",
+              "4 lần",
+              "5 lần"
+            ],
+            "correct": "3 lần"
+          },
+          {
+            "id": "nc8",
+            "question": "Nếu 🍎+🍎=10 thì mỗi quả 🍎 bằng bao nhiêu?",
+            "options": [
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "correct": "5"
+          },
+          {
+            "id": "nc9",
+            "question": "Biết 🐱+🐶=8 và 🐱-🐶=2. Hỏi 🐱=?",
+            "options": [
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "correct": "5"
+          },
+          {
+            "id": "nc10",
+            "question": "Số tiếp theo của dãy: 2, 4, 6, 8, ___?",
+            "options": [
+              "9",
+              "10",
+              "11",
+              "12"
+            ],
+            "correct": "10"
+          },
+          {
+            "id": "nc11",
+            "question": "Số tiếp theo của dãy: 1, 3, 5, 7, ___?",
+            "options": [
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "correct": "9"
+          },
+          {
+            "id": "nc12",
+            "question": "Số tiếp theo của dãy: 5, 10, 15, 20, ___?",
+            "options": [
+              "22",
+              "25",
+              "30",
+              "35"
+            ],
+            "correct": "25"
+          },
+          {
+            "id": "nc13",
+            "question": "Số tiếp theo của dãy: 30, 25, 20, 15, ___?",
+            "options": [
+              "5",
+              "10",
+              "12",
+              "14"
+            ],
+            "correct": "10"
+          },
+          {
+            "id": "nc14",
+            "question": "Trồng 6 cây thẳng hàng cách đều nhau có bao nhiêu khoảng?",
+            "options": [
+              "4 khoảng",
+              "5 khoảng",
+              "6 khoảng",
+              "7 khoảng"
+            ],
+            "correct": "5 khoảng"
+          },
+          {
+            "id": "nc15",
+            "question": "Cầu thang nhà 4 tầng cần leo mấy đợt cầu thang để lên tầng 4?",
+            "options": [
+              "2 đợt",
+              "3 đợt",
+              "4 đợt",
+              "5 đợt"
+            ],
+            "correct": "3 đợt"
+          },
+          {
+            "id": "nc16",
+            "question": "Bà có 4 cháu, mỗi cháu tặng 2 quả táo. Bà tặng tất cả bao nhiêu quả?",
+            "options": [
+              "4 quả",
+              "6 quả",
+              "8 quả",
+              "10 quả"
+            ],
+            "correct": "8 quả"
+          },
+          {
+            "id": "nc17",
+            "question": "Biết 🦋+🦋+🦋=15. Hỏi 🦋=?",
+            "options": [
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "correct": "5"
+          },
+          {
+            "id": "nc18",
+            "question": "Có 1 con bò và 2 con gà. Tất cả có bao nhiêu cái chân?",
+            "options": [
+              "6 chân",
+              "8 chân",
+              "10 chân",
+              "12 chân"
+            ],
+            "correct": "8 chân"
+          },
+          {
+            "id": "nc19",
+            "question": "Có 3 con vịt và 2 con chó. Tất cả có bao nhiêu chân?",
+            "options": [
+              "10 chân",
+              "12 chân",
+              "14 chân",
+              "16 chân"
+            ],
+            "correct": "14 chân"
+          },
+          {
+            "id": "nc20",
+            "question": "Số tiếp theo: 1, 4, 7, 10, ___?",
+            "options": [
+              "11",
+              "12",
+              "13",
+              "14"
+            ],
+            "correct": "13"
+          },
+          {
+            "id": "nc21",
+            "question": "Một sợi dây 20m chia làm 5 đoạn bằng nhau, mỗi đoạn dài bao nhiêu?",
+            "options": [
+              "3 m",
+              "4 m",
+              "5 m",
+              "10 m"
+            ],
+            "correct": "4 m"
+          },
+          {
+            "id": "nc22",
+            "question": "Có 5 cây cột thẳng hàng cách đều, biết khoảng cách giữa 2 cột là 3m. Tổng độ dài là?",
+            "options": [
+              "9 m",
+              "12 m",
+              "15 m",
+              "18 m"
+            ],
+            "correct": "12 m"
+          },
+          {
+            "id": "nc23",
+            "question": "Số tiếp theo: 100, 90, 80, 70, ___?",
+            "options": [
+              "50",
+              "55",
+              "60",
+              "65"
+            ],
+            "correct": "60"
+          },
+          {
+            "id": "nc24",
+            "question": "Số tiếp theo của dãy: 0, 2, 4, 6, ___?",
+            "options": [
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "correct": "8"
+          },
+          {
+            "id": "nc25",
+            "question": "Cô giáo có 10 cái kẹo chia đều cho 5 bạn. Mỗi bạn được mấy cái?",
+            "options": [
+              "1 cái",
+              "2 cái",
+              "3 cái",
+              "5 cái"
+            ],
+            "correct": "2 cái"
+          },
+          {
+            "id": "nc26",
+            "question": "Vòng tròn thứ ba có số nào ở ô trống (biết quy luật: tổng hai số trên = số dưới)?",
+            "image": "/images/am1_circles.jpg",
+            "options": [
+              "26",
+              "27",
+              "28",
+              "29"
+            ],
+            "correct": "28"
+          },
+          {
+            "id": "nc27",
+            "question": "Hình chữ X: tổng hai số nằm trên bằng tổng hai số nằm dưới. Số còn thiếu ở hình 3 là bao nhiêu?",
+            "image": "/images/am1_xcross.jpg",
+            "options": [
+              "25",
+              "26",
+              "27",
+              "28"
+            ],
+            "correct": "28"
+          },
+          {
+            "id": "nc28",
+            "question": "Tháp số: mỗi ô bằng tổng hai ô bên dưới. Ô trống ở giữa hàng thứ 2 là bao nhiêu?",
+            "image": "/images/am1_pyramid.jpg",
+            "options": [
+              "50",
+              "55",
+              "60",
+              "65"
+            ],
+            "correct": "60"
+          },
+          {
+            "id": "nc29",
+            "question": "Hình thứ 4 trong dãy hình chữ thập có bao nhiêu ô vuông?",
+            "image": "/images/am3_cross_sequence.jpg",
+            "options": [
+              "17",
+              "21",
+              "25",
+              "29"
+            ],
+            "correct": "25"
+          },
+          {
+            "id": "nc30",
+            "question": "Dọc hành lang có trồng cây hai bên. Bên trái có 11 cây, bên phải có 11 cây. Hỏi có bao nhiêu khoảng cách giữa các cây (tổng cả hai bên)?",
+            "image": "/images/am6_hallway.jpg",
+            "options": [
+              "18",
+              "20",
+              "22",
+              "24"
+            ],
+            "correct": "20"
+          },
+          {
+            "id": "nc31",
+            "question": "Xếp hạt thành hình tam giác: hàng 1 có 1 hạt, hàng 2 có 2 hạt, … hàng 6 có 6 hạt. Tổng số hạt cần dùng là bao nhiêu?",
+            "image": "/images/am6_triangle_beads.jpg",
+            "options": [
+              "15 hạt",
+              "18 hạt",
+              "21 hạt",
+              "28 hạt"
+            ],
+            "correct": "21 hạt"
+          },
+          {
+            "id": "nc32",
+            "question": "Phơi 9 cái áo trên dây, dùng kẹp sao cho mỗi áo kế nhau dùng chung 1 kẹp. Cần bao nhiêu cái kẹp?",
+            "image": "/images/am6_clothespins.jpg",
+            "options": [
+              "9 cái",
+              "10 cái",
+              "16 cái",
+              "18 cái"
+            ],
+            "correct": "10 cái"
+          }
+        ]
+      }
+    }
+  }
+}
