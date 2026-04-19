@@ -286,6 +286,7 @@ export default function App() {
   if (view === 'FEEDBACK') {
     const { answer, correct, isCorrect } = lastAnswer
     const isLast = qIndex + 1 >= session.length
+    const q = session[qIndex]
 
     return (
       <div className="app-container">
@@ -297,6 +298,8 @@ export default function App() {
 
           {!isCorrect && (
             <div className="feedback-detail">
+              <p className="feedback-question-text">{q.question}</p>
+              {q.image && <img src={q.image} alt="Hình minh hoạ" className="feedback-question-image" />}
               <p>Muối Bảo Duy chọn: <span className="wrong-ans">{answer}</span></p>
               <p>Đáp án đúng: <span className="correct-ans">{correct}</span></p>
             </div>
@@ -318,7 +321,7 @@ export default function App() {
       if (ans === session[i].correct) {
         score++
       } else {
-        mistakes.push({ q: session[i].question, you: ans, correct: session[i].correct })
+        mistakes.push({ q: session[i].question, image: session[i].image || null, you: ans, correct: session[i].correct })
       }
     })
     const isPerfect = score === session.length
@@ -347,6 +350,7 @@ export default function App() {
               {mistakes.map((m, i) => (
                 <div key={i} className="review-item">
                   <div className="review-question">{m.q}</div>
+                  {m.image && <img src={m.image} alt="Hình minh hoạ" className="review-image" />}
                   <div className="review-wrong">Muối Bảo Duy chọn: {m.you}</div>
                   <div className="review-correct">Đáp án đúng: {m.correct}</div>
                 </div>

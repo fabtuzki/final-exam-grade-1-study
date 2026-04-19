@@ -283,6 +283,34 @@ body {
 .wrong-ans   { color: var(--wrong);   font-weight: 900; text-decoration: line-through; }
 .correct-ans { color: var(--correct); font-weight: 900; }
 
+.feedback-question-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.feedback-question-image {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 10px;
+  border: 2px solid #eee;
+}
+
+.review-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 8px auto;
+  border-radius: 8px;
+  border: 2px solid #eee;
+}
+
 /* ── Main bubbly button ── */
 .btn-bubbly {
   background: var(--primary);
