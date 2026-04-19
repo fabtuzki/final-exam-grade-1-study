@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import questionsData from '../data/questions.json'
 
 function shuffle(arr) {
   return [...arr].sort(() => 0.5 - Math.random())
@@ -18,9 +19,7 @@ export default function App() {
   const [reportedIds, setReportedIds]       = useState(new Set())
 
   useEffect(() => {
-    fetch('/api/questions')
-      .then(r => r.json())
-      .then(d => setAllData(d))
+    setAllData(questionsData)
 
     const saved = localStorage.getItem('muoiHistory')
     if (saved) setHistory(JSON.parse(saved))
