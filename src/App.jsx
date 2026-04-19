@@ -84,7 +84,7 @@ export default function App() {
       setLastAnswer(null)
       setView('QUIZ')
     } else {
-      finishQuiz([...userAnswers, lastAnswer.answer])
+      finishQuiz(userAnswers)
     }
   }
 
