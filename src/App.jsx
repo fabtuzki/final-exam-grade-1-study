@@ -5,18 +5,42 @@ function shuffle(arr) {
   return [...arr].sort(() => 0.5 - Math.random())
 }
 
+function buildSession(allData) {
+  const subtopics = []
+  for (const [pk, parent] of Object.entries(allData)) {
+    for (const [sk, sub] of Object.entries(parent.subtopics)) {
+      const taggedQs = sub.questions.map(q => ({
+        ...q,
+        parentKey: pk,
+        subKey: sk,
+        parentLabel: parent.label,
+        subLabel: sub.label,
+        subEmoji: sub.emoji,
+      }))
+      subtopics.push(taggedQs)
+    }
+  }
+  // Guarantee 1 question per subtopic
+  let picked = subtopics.map(qs => shuffle(qs)[0])
+  const pickedIds = new Set(picked.map(q => q.id))
+  // Fill to 10 with random remaining
+  const remaining = subtopics.flat().filter(q => !pickedIds.has(q.id))
+  const extra = shuffle(remaining).slice(0, Math.max(0, 10 - picked.length))
+  picked = shuffle([...picked, ...extra])
+  return picked.map(q => ({ ...q, options: shuffle(q.options) }))
+}
+
 export default function App() {
-  const [allData, setAllData]               = useState(null)
-  const [view, setView]                     = useState('DASHBOARD')
-  const [selectedParent, setSelectedParent] = useState(null)
-  const [selectedSub, setSelectedSub]       = useState(null)
-  const [session, setSession]               = useState([])
-  const [qIndex, setQIndex]                 = useState(0)
-  const [userAnswers, setUserAnswers]       = useState([])
-  const [lastAnswer, setLastAnswer]         = useState(null)
-  const [history, setHistory]               = useState([])
-  const [reports, setReports]               = useState([])
-  const [reportedIds, setReportedIds]       = useState(new Set())
+  const [allData, setAllData]             = useState(null)
+  const [view, setView]                   = useState('DASHBOARD')
+  const [session, setSession]             = useState([])
+  const [qIndex, setQIndex]               = useState(0)
+  const [userAnswers, setUserAnswers]     = useState([])
+  const [lastAnswer, setLastAnswer]       = useState(null)
+  const [history, setHistory]             = useState([])
+  const [reports, setReports]             = useState([])
+  const [reportedIds, setReportedIds]     = useState(new Set())
+  const [questionStats, setQuestionStats] = useState({})
 
   useEffect(() => {
     setAllData(questionsData)
@@ -26,32 +50,28 @@ export default function App() {
 
     const savedReports = localStorage.getItem('muoiReports')
     if (savedReports) setReports(JSON.parse(savedReports))
+
+    const savedStats = localStorage.getItem('muoiQuestionStats')
+    if (savedStats) setQuestionStats(JSON.parse(savedStats))
   }, [])
 
-  const startQuiz = (parentKey, subKey) => {
-    const pool = allData[parentKey].subtopics[subKey].questions
-    const picked = shuffle(pool).slice(0, 10).map(q => ({
-      ...q,
-      options: shuffle(q.options),
-    }))
+  const startQuiz = () => {
+    const picked = buildSession(allData)
     setSession(picked)
     setUserAnswers([])
     setQIndex(0)
     setLastAnswer(null)
-    setSelectedParent(parentKey)
-    setSelectedSub(subKey)
     setReportedIds(new Set())
     setView('QUIZ')
   }
 
   const reportQuestion = () => {
     const q = session[qIndex]
-    const sub = allData[selectedParent].subtopics[selectedSub]
     const report = {
       id: q.id,
       question: q.question,
       hasImage: !!q.image,
-      topic: sub.label,
+      topic: q.subLabel,
       date: new Date().toLocaleDateString('vi-VN'),
     }
     const newReports = [report, ...reports.filter(r => r.id !== q.id)]
@@ -66,10 +86,24 @@ export default function App() {
   }
 
   const handleAnswer = (answer) => {
-    const correct = session[qIndex].correct
+    const q = session[qIndex]
+    const correct = q.correct
     const isCorrect = answer === correct
     setUserAnswers(prev => [...prev, answer])
     setLastAnswer({ answer, correct, isCorrect })
+
+    // Update live stats immediately (persists even if quiz is exited)
+    setQuestionStats(prev => {
+      const next = { ...prev }
+      if (!next[q.id]) next[q.id] = { correct: 0, wrong: 0 }
+      next[q.id] = {
+        correct: next[q.id].correct + (isCorrect ? 1 : 0),
+        wrong:   next[q.id].wrong   + (isCorrect ? 0 : 1),
+      }
+      localStorage.setItem('muoiQuestionStats', JSON.stringify(next))
+      return next
+    })
+
     setView('FEEDBACK')
   }
 
@@ -83,14 +117,14 @@ export default function App() {
     }
   }
 
-  // Save history once when RESULTS view is entered
+  // Save history when RESULTS view is entered
   useEffect(() => {
-    if (view !== 'RESULTS' || !session.length || !allData || !selectedParent || !selectedSub) return
+    if (view !== 'RESULTS' || !session.length) return
     let score = 0
     userAnswers.forEach((a, i) => { if (session[i] && a === session[i].correct) score++ })
     const attempt = {
       date: new Date().toLocaleDateString('vi-VN'),
-      topic: allData[selectedParent].subtopics[selectedSub].label,
+      topic: 'Tổng hợp',
       score,
       total: session.length,
       perfect: score === session.length,
@@ -103,11 +137,35 @@ export default function App() {
   }, [view]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const exitQuiz = () => {
-    setView('SUBTOPIC')
+    setView('DASHBOARD')
     setSession([])
     setUserAnswers([])
     setQIndex(0)
     setLastAnswer(null)
+  }
+
+  // Compute per-subtopic stats for dashboard
+  const computeTopicStats = () => {
+    if (!allData) return []
+    const result = []
+    for (const [, parent] of Object.entries(allData)) {
+      for (const [, sub] of Object.entries(parent.subtopics)) {
+        let correct = 0, wrong = 0
+        for (const q of sub.questions) {
+          const s = questionStats[q.id]
+          if (s) { correct += s.correct; wrong += s.wrong }
+        }
+        result.push({
+          label: sub.label,
+          emoji: sub.emoji,
+          parentLabel: parent.label,
+          correct,
+          wrong,
+          total: correct + wrong,
+        })
+      }
+    }
+    return result
   }
 
   if (!allData) {
@@ -126,25 +184,47 @@ export default function App() {
 
   // ── DASHBOARD ─────────────────────────────────────────────────────────────────
   if (view === 'DASHBOARD') {
+    const topicStats = computeTopicStats()
+    const hasStats   = topicStats.some(t => t.total > 0)
     return (
       <div className="app-container">
         <div className="card">
           <h1 className="title">🌟 Muối Bảo Duy Ôn Tập 🌟</h1>
-          <p className="subtitle">Bé chọn môn nào để ôn hôm nay?</p>
+          <p className="subtitle">Mỗi quiz gồm 10 câu từ tất cả các chủ đề!</p>
 
-          <div className="parent-grid">
-            {Object.entries(allData).map(([key, parent]) => (
-              <button
-                key={key}
-                className={`btn-parent btn-${parent.color}`}
-                onClick={() => { setSelectedParent(key); setView('SUBTOPIC') }}
-              >
-                <span className="btn-emoji">{parent.emoji}</span>
-                <span>{parent.label}</span>
-              </button>
-            ))}
-          </div>
+          <button className="btn-bubbly" onClick={startQuiz}>
+            🎯 Bắt đầu Quiz!
+          </button>
 
+          {/* Topic stats */}
+          {hasStats && (
+            <div className="stats-shelf">
+              <h3>📊 Thành tích theo chủ đề</h3>
+              <div className="stats-table">
+                <div className="stats-header">
+                  <span>Chủ đề</span>
+                  <span>Đúng</span>
+                  <span>Sai</span>
+                  <span>Tỷ lệ</span>
+                </div>
+                {topicStats.map((t, i) => {
+                  const rate = t.total > 0 ? Math.round((t.correct / t.total) * 100) : null
+                  return (
+                    <div key={i} className="stats-row">
+                      <span className="stats-label">{t.emoji} {t.label}</span>
+                      <span className="stats-correct">{t.correct}</span>
+                      <span className="stats-wrong">{t.wrong}</span>
+                      <span className={`stats-rate ${rate !== null ? (rate >= 80 ? 'good' : rate >= 50 ? 'ok' : 'bad') : ''}`}>
+                        {rate !== null ? `${rate}%` : '—'}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Trophy shelf */}
           <div className="trophy-shelf">
             <h3>🏆 Tủ Kính Thành Tích 🏆</h3>
             <p style={{ fontSize: '0.9rem', color: '#666' }}>
@@ -192,51 +272,9 @@ export default function App() {
     )
   }
 
-  // ── SUBTOPIC PICKER ───────────────────────────────────────────────────────────
-  if (view === 'SUBTOPIC') {
-    const parent = allData[selectedParent]
-    return (
-      <div className="app-container">
-        <div className="card">
-          <button className="btn-back" onClick={() => setView('DASHBOARD')}>← Về trang chủ</button>
-          <h2 className="title" style={{ fontSize: '2rem' }}>
-            {parent.emoji} {parent.label}
-          </h2>
-          <p className="subtitle">Chọn chuyên đề để luyện tập:</p>
-
-          <div className="sub-grid">
-            {Object.entries(parent.subtopics).map(([key, sub]) => {
-              const subAttempts = history.filter(h => h.topic === sub.label)
-              const best = subAttempts.length > 0
-                ? Math.max(...subAttempts.map(h => h.score))
-                : null
-              return (
-                <button
-                  key={key}
-                  className={`btn-sub btn-${parent.color}`}
-                  onClick={() => startQuiz(selectedParent, key)}
-                >
-                  <span className="sub-emoji">{sub.emoji}</span>
-                  <span className="sub-label">{sub.label}</span>
-                  <span className="sub-count">{sub.questions.length} câu</span>
-                  {best !== null && (
-                    <span className="sub-best">
-                      Tốt nhất: {best}/10 {best === 10 ? '🏆' : ''}
-                    </span>
-                  )}
-                </button>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   // ── QUIZ ──────────────────────────────────────────────────────────────────────
   if (view === 'QUIZ') {
-    const q = session[qIndex]
-    const sub = allData[selectedParent].subtopics[selectedSub]
+    const q        = session[qIndex]
     const progress = (qIndex / session.length) * 100
 
     return (
@@ -244,7 +282,7 @@ export default function App() {
         <div className="card">
           <div className="quiz-header">
             <button className="btn-exit" onClick={exitQuiz}>✕ Thoát</button>
-            <span className="quiz-topic-tag">{sub.emoji} {sub.label}</span>
+            <span className="quiz-topic-tag">{q.subEmoji} {q.subLabel}</span>
           </div>
 
           <div className="progress-bar-container">
@@ -262,7 +300,7 @@ export default function App() {
               onClick={reportQuestion}
               disabled={reportedIds.has(q.id)}
             >
-              {reportedIds.has(q.id) ? '✓ Đã ghi nhận báo lỗi' : '⚠️ Không xem được hình / Không đọc được câu'}
+              {reportedIds.has(q.id) ? '✓ Đã ghi nhận báo lỗi' : '⚠️ Không xem được hình / Sai đáp án'}
             </button>
           </div>
 
@@ -302,7 +340,17 @@ export default function App() {
             </div>
           )}
 
-          <button className="btn-bubbly" style={{ marginTop: '30px' }} onClick={nextQuestion}>
+          <div style={{ textAlign: 'center', margin: '16px 0 8px' }}>
+            <button
+              className={`btn-report${reportedIds.has(q.id) ? ' reported' : ''}`}
+              onClick={reportQuestion}
+              disabled={reportedIds.has(q.id)}
+            >
+              {reportedIds.has(q.id) ? '✓ Đã ghi nhận báo lỗi' : '⚠️ Báo đáp án sai'}
+            </button>
+          </div>
+
+          <button className="btn-bubbly" style={{ marginTop: '16px' }} onClick={nextQuestion}>
             {isLast ? '🏁 Xem kết quả' : 'Câu tiếp theo →'}
           </button>
         </div>
@@ -318,7 +366,13 @@ export default function App() {
       if (ans === session[i].correct) {
         score++
       } else {
-        mistakes.push({ q: session[i].question, image: session[i].image || null, you: ans, correct: session[i].correct })
+        mistakes.push({
+          q: session[i].question,
+          image: session[i].image || null,
+          topic: `${session[i].subEmoji} ${session[i].subLabel}`,
+          you: ans,
+          correct: session[i].correct,
+        })
       }
     })
     const isPerfect = score === session.length
@@ -346,6 +400,7 @@ export default function App() {
               <h3>📖 Các câu cần ôn lại:</h3>
               {mistakes.map((m, i) => (
                 <div key={i} className="review-item">
+                  <div className="review-topic-tag">{m.topic}</div>
                   <div className="review-question">{m.q}</div>
                   {m.image && <img src={m.image} alt="Hình minh hoạ" className="review-image" />}
                   <div className="review-wrong">Muối Bảo Duy chọn: {m.you}</div>
@@ -357,18 +412,11 @@ export default function App() {
 
           <div style={{ display: 'flex', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
             <button
-              className={`btn-bubbly btn-${allData[selectedParent].color}`}
+              className="btn-bubbly btn-primary"
               style={{ flex: 1 }}
-              onClick={() => startQuiz(selectedParent, selectedSub)}
+              onClick={startQuiz}
             >
               🔄 Làm lại
-            </button>
-            <button
-              className="btn-bubbly"
-              style={{ flex: 1, background: '#888', boxShadow: '0 6px 0 #555' }}
-              onClick={() => setView('SUBTOPIC')}
-            >
-              📚 Chọn chủ đề
             </button>
             <button
               className="btn-bubbly"

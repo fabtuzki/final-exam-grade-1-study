@@ -959,89 +959,89 @@
             "id": "ct35",
             "question": "Điền vần ai hay ay: số h___",
             "options": [
-              "ai",
-              "ay",
-              "ây",
-              "âi"
+              "hai",
+              "hay",
+              "hây",
+              "hâi"
             ],
-            "correct": "ai"
+            "correct": "hai"
           },
           {
             "id": "ct36",
             "question": "Điền vần ai hay ay: bàn t___",
             "options": [
-              "ai",
-              "ay",
-              "ây",
-              "âi"
+              "tai",
+              "tay",
+              "tây",
+              "tâi"
             ],
-            "correct": "ay"
+            "correct": "tay"
           },
           {
             "id": "ct37",
             "question": "Điền vần ai hay ay: gà m___",
             "options": [
-              "ai",
-              "ay",
-              "ây",
-              "âi"
+              "mái",
+              "máy",
+              "mây",
+              "mâi"
             ],
-            "correct": "ai"
+            "correct": "mái"
           },
           {
             "id": "ct38",
             "question": "Điền vần ai hay ay: b___ lượn",
             "options": [
-              "ai",
-              "ay",
-              "ây",
-              "âi"
+              "bai",
+              "bay",
+              "bây",
+              "bâi"
             ],
-            "correct": "ay"
+            "correct": "bay"
           },
           {
             "id": "ct39",
             "question": "Điền vần uôt hay uôc: con ch___",
             "options": [
-              "uôt",
-              "uôc",
-              "uông",
-              "uôm"
+              "chuột",
+              "chuộc",
+              "chuồng",
+              "chuôm"
             ],
-            "correct": "uôt"
+            "correct": "chuột"
           },
           {
             "id": "ct40",
             "question": "Điền vần uôt hay uôc: ngọn đ___",
             "options": [
-              "uôt",
-              "uôc",
-              "uông",
-              "uôm"
+              "đuốt",
+              "đuốc",
+              "đuồng",
+              "đuôm"
             ],
-            "correct": "uôc"
+            "correct": "đuốc"
           },
           {
             "id": "ct41",
             "question": "Điền vần uôt hay uôc: lạnh b___",
             "options": [
-              "uôt",
-              "uôc",
-              "uông",
-              "uôm"
+              "buốt",
+              "buộc",
+              "buồng",
+              "buôm"
             ],
-            "correct": "uôt"
+            "correct": "buốt"
           },
           {
             "id": "ct42",
             "question": "Điền vần uôt hay uôc: vị th___",
             "options": [
-              "uôt",
-              "uôc",
-              "uông",
-              "uôm"
+              "thuốt",
+              "thuốc",
+              "thuồng",
+              "thuôm"
             ],
-            "correct": "uôc"
+            "correct": "thuốc"
           },
           {
             "id": "ct43",
@@ -1825,7 +1825,7 @@
               "6 giờ",
               "7 giờ"
             ],
-            "correct": "6 giờ"
+            "correct": "7 giờ"
           },
           {
             "id": "hh32",
@@ -1877,7 +1877,7 @@
           },
           {
             "id": "hh36",
-            "question": "Hình nào là khối cầu trong các hình sau?",
+            "question": "Hình nào là khối lập phương trong các hình sau?",
             "image": "/images/g3_3d_objects.jpg",
             "options": [
               "Hình A",
@@ -1885,7 +1885,7 @@
               "Hình C",
               "Hình D"
             ],
-            "correct": "Hình A"
+            "correct": "Hình D"
           },
           {
             "id": "hh37",
