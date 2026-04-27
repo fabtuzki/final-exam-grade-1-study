@@ -37,6 +37,8 @@ export default function App() {
   const [userAnswers, setUserAnswers]     = useState([])
   const [lastAnswer, setLastAnswer]       = useState(null)
   const [history, setHistory]             = useState([])
+  const [goldCups, setGoldCups]           = useState(0)
+  const [smellShoes, setSmellShoes]       = useState(0)
   const [reports, setReports]             = useState([])
   const [reportedIds, setReportedIds]     = useState(new Set())
   const [questionStats, setQuestionStats] = useState({})
@@ -51,6 +53,13 @@ export default function App() {
 
     const saved = localStorage.getItem('muoiHistory')
     if (saved) setHistory(JSON.parse(saved))
+
+    // Trophy counters are stored independently — they never decrease
+    const cups  = parseInt(localStorage.getItem('muoiGoldCups')  ?? '0', 10)
+    const shoes = parseInt(localStorage.getItem('muoiSmellShoes') ?? '0', 10)
+    setGoldCups(cups)
+    setSmellShoes(shoes)
+
     const savedReports = localStorage.getItem('muoiReports')
     if (savedReports) setReports(JSON.parse(savedReports))
     const savedStats = localStorage.getItem('muoiQuestionStats')
@@ -104,7 +113,8 @@ export default function App() {
     const q = session[qIndex]
     const correct   = q.correct
     const isCorrect = answer.trim().toLowerCase() === correct.trim().toLowerCase()
-    setUserAnswers(prev => [...prev, answer])
+    const newAnswers = [...userAnswers, answer]
+    setUserAnswers(newAnswers)
     setLastAnswer({ answer, correct, isCorrect })
     setSpelling('')
 
@@ -121,6 +131,43 @@ export default function App() {
       return next
     })
 
+    // Save history + update trophy counters when the last question is answered.
+    // Done here (not in useEffect) to use synchronous local values, avoiding
+    // stale closure bugs. Trophy counters are stored independently so they
+    // never decrease when old history entries roll off the 20-entry cap.
+    const isLast = qIndex + 1 >= session.length
+    if (isLast) {
+      let score = 0
+      newAnswers.forEach((a, i) => {
+        if (session[i] && a.trim().toLowerCase() === session[i].correct.trim().toLowerCase()) score++
+      })
+      const perfect = score === session.length
+      const attempt = {
+        date:  new Date().toLocaleDateString('vi-VN'),
+        topic: quizMode === 'en' ? '🇬🇧 English' : 'Tổng hợp',
+        score, total: session.length, perfect,
+      }
+      setHistory(prev => {
+        const newHistory = [attempt, ...prev].slice(0, 20)
+        localStorage.setItem('muoiHistory', JSON.stringify(newHistory))
+        return newHistory
+      })
+      // Increment the independent trophy counters — they only ever go up
+      if (perfect) {
+        setGoldCups(prev => {
+          const next = prev + 1
+          localStorage.setItem('muoiGoldCups', String(next))
+          return next
+        })
+      } else {
+        setSmellShoes(prev => {
+          const next = prev + 1
+          localStorage.setItem('muoiSmellShoes', String(next))
+          return next
+        })
+      }
+    }
+
     window.speechSynthesis?.cancel()
     setIsSpeaking(false)
     setView('FEEDBACK')
@@ -136,24 +183,6 @@ export default function App() {
       setView('RESULTS')
     }
   }
-
-  useEffect(() => {
-    if (view !== 'RESULTS' || !session.length) return
-    let score = 0
-    userAnswers.forEach((a, i) => {
-      if (session[i] && a.trim().toLowerCase() === session[i].correct.trim().toLowerCase()) score++
-    })
-    const attempt = {
-      date: new Date().toLocaleDateString('vi-VN'),
-      topic: quizMode === 'en' ? '🇬🇧 English' : 'Tổng hợp',
-      score, total: session.length, perfect: score === session.length,
-    }
-    setHistory(prev => {
-      const newHistory = [attempt, ...prev].slice(0, 20)
-      localStorage.setItem('muoiHistory', JSON.stringify(newHistory))
-      return newHistory
-    })
-  }, [view]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Auto-focus spelling input when question changes
   useEffect(() => {
@@ -198,9 +227,6 @@ export default function App() {
       </div>
     )
   }
-
-  const goldCups   = history.filter(h => h.perfect).length
-  const smellShoes = history.filter(h => !h.perfect).length
 
   // ── DASHBOARD ─────────────────────────────────────────────────────────────────
   if (view === 'DASHBOARD') {
