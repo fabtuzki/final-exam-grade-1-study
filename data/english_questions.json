@@ -1,0 +1,1757 @@
+{
+  "english": {
+    "label": "English",
+    "emoji": "🇬🇧",
+    "color": "english",
+    "subtopics": {
+      "camb_vocab": {
+        "label": "Vocabulary",
+        "emoji": "📝",
+        "questions": [
+          {
+            "id": "cv01",
+            "type": "mcq",
+            "question": "What do we use to smell things?",
+            "options": [
+              "nose",
+              "eyes",
+              "ears",
+              "mouth"
+            ],
+            "correct": "nose"
+          },
+          {
+            "id": "cv02",
+            "type": "mcq",
+            "question": "Which one is NOT a body part?",
+            "options": [
+              "arm",
+              "jacket",
+              "nose",
+              "feet"
+            ],
+            "correct": "jacket"
+          },
+          {
+            "id": "cv03",
+            "type": "mcq",
+            "question": "What animal is this? 🐄",
+            "options": [
+              "cow",
+              "sheep",
+              "hen",
+              "horse"
+            ],
+            "correct": "cow",
+            "image": "/images/en_cow.jpg"
+          },
+          {
+            "id": "cv04",
+            "type": "mcq",
+            "question": "What animal is this?",
+            "options": [
+              "elephant",
+              "crocodile",
+              "hippo",
+              "snake"
+            ],
+            "correct": "elephant",
+            "image": "/images/en_elephant.jpg"
+          },
+          {
+            "id": "cv05",
+            "type": "mcq",
+            "question": "What animal is this?",
+            "options": [
+              "crocodile",
+              "monkey",
+              "elephant",
+              "giraffe"
+            ],
+            "correct": "crocodile",
+            "image": "/images/en_crocodile.jpg"
+          },
+          {
+            "id": "cv06",
+            "type": "mcq",
+            "question": "Which animal can swim?",
+            "options": [
+              "fish",
+              "cat",
+              "horse",
+              "bee"
+            ],
+            "correct": "fish",
+            "image": "/images/en_fish.jpg"
+          },
+          {
+            "id": "cv07",
+            "type": "mcq",
+            "question": "Which animal lays eggs?",
+            "options": [
+              "hen",
+              "cow",
+              "horse",
+              "goat"
+            ],
+            "correct": "hen",
+            "image": "/images/en_hen.jpg"
+          },
+          {
+            "id": "cv08",
+            "type": "mcq",
+            "question": "What animal is 🐒?",
+            "options": [
+              "monkey",
+              "lion",
+              "tiger",
+              "parrot"
+            ],
+            "correct": "monkey"
+          },
+          {
+            "id": "cv09",
+            "type": "mcq",
+            "question": "What animal is 🦁?",
+            "options": [
+              "lion",
+              "tiger",
+              "giraffe",
+              "crocodile"
+            ],
+            "correct": "lion"
+          },
+          {
+            "id": "cv10",
+            "type": "mcq",
+            "question": "The cat is ___ the box.",
+            "options": [
+              "in",
+              "on",
+              "under",
+              "behind"
+            ],
+            "correct": "in"
+          },
+          {
+            "id": "cv11",
+            "type": "mcq",
+            "question": "The bird is ___ the tree.",
+            "options": [
+              "on",
+              "in",
+              "under",
+              "next to"
+            ],
+            "correct": "on"
+          },
+          {
+            "id": "cv12",
+            "type": "mcq",
+            "question": "The dog is ___ the chair.",
+            "options": [
+              "under",
+              "on",
+              "in",
+              "above"
+            ],
+            "correct": "under"
+          },
+          {
+            "id": "cv13",
+            "type": "mcq",
+            "question": "bounce, ride, run, catch, swim — these are all ___.",
+            "options": [
+              "action words",
+              "color words",
+              "animal words",
+              "body part words"
+            ],
+            "correct": "action words"
+          },
+          {
+            "id": "cv14",
+            "type": "mcq",
+            "question": "What do you wear on your feet?",
+            "options": [
+              "shoes",
+              "jacket",
+              "skirt",
+              "pants"
+            ],
+            "correct": "shoes",
+            "image": "/images/en_shoes.jpg"
+          },
+          {
+            "id": "cv15",
+            "type": "mcq",
+            "question": "'feet' is the plural of which word?",
+            "options": [
+              "foot",
+              "feet",
+              "feets",
+              "foots"
+            ],
+            "correct": "foot"
+          }
+        ]
+      },
+      "camb_grammar": {
+        "label": "Grammar",
+        "emoji": "✏️",
+        "questions": [
+          {
+            "id": "cg01",
+            "type": "listening",
+            "speak": "Have you got a dog?",
+            "question": "🔊 Listen. What is the correct answer?",
+            "options": [
+              "Yes, I have.",
+              "Yes, I am.",
+              "Yes, I do.",
+              "Yes, I can."
+            ],
+            "correct": "Yes, I have."
+          },
+          {
+            "id": "cg02",
+            "type": "listening",
+            "speak": "Would you like an apple?",
+            "question": "🔊 Listen. What is the correct answer?",
+            "options": [
+              "Yes, please.",
+              "Yes, I have.",
+              "Yes, I am.",
+              "Yes, I do."
+            ],
+            "correct": "Yes, please."
+          },
+          {
+            "id": "cg03",
+            "type": "mcq",
+            "question": "___ you got a cat?",
+            "options": [
+              "Have",
+              "Are",
+              "Do",
+              "Is"
+            ],
+            "correct": "Have"
+          },
+          {
+            "id": "cg04",
+            "type": "mcq",
+            "question": "Are there any flowers? Choose the correct answer.",
+            "options": [
+              "Yes, there are.",
+              "Yes, there is.",
+              "Yes, they are.",
+              "Yes, I am."
+            ],
+            "correct": "Yes, there are."
+          },
+          {
+            "id": "cg05",
+            "type": "mcq",
+            "question": "There ___ a dog in the garden.",
+            "options": [
+              "is",
+              "are",
+              "am",
+              "be"
+            ],
+            "correct": "is"
+          },
+          {
+            "id": "cg06",
+            "type": "mcq",
+            "question": "There ___ three cats in the room.",
+            "options": [
+              "are",
+              "is",
+              "am",
+              "be"
+            ],
+            "correct": "are"
+          },
+          {
+            "id": "cg07",
+            "type": "mcq",
+            "question": "I'm ___ a T-shirt.",
+            "options": [
+              "wearing",
+              "wear",
+              "wears",
+              "wore"
+            ],
+            "correct": "wearing"
+          },
+          {
+            "id": "cg08",
+            "type": "listening",
+            "speak": "Are you pointing to the floor?",
+            "question": "🔊 Listen. What is the correct answer?",
+            "options": [
+              "Yes, I am.",
+              "Yes, I have.",
+              "Yes, I do.",
+              "Yes, I can."
+            ],
+            "correct": "Yes, I am."
+          },
+          {
+            "id": "cg09",
+            "type": "mcq",
+            "question": "Do you want some fruit? Choose the correct answer.",
+            "options": [
+              "Yes, please.",
+              "Yes, I have.",
+              "Yes, I am.",
+              "Yes, there are."
+            ],
+            "correct": "Yes, please."
+          },
+          {
+            "id": "cg10",
+            "type": "mcq",
+            "question": "How many cards are there? (Picture shows 4 cards) ___",
+            "options": [
+              "There are four cards.",
+              "There is four cards.",
+              "There are fours cards.",
+              "There has four cards."
+            ],
+            "correct": "There are four cards."
+          },
+          {
+            "id": "cg11",
+            "type": "mcq",
+            "question": "When's your birthday? Choose the correct answer.",
+            "options": [
+              "My birthday is in June.",
+              "My birthday are in June.",
+              "My birthday am in June.",
+              "My birthday be in June."
+            ],
+            "correct": "My birthday is in June."
+          },
+          {
+            "id": "cg12",
+            "type": "listening",
+            "speak": "Is she a teacher?",
+            "question": "🔊 Listen. She IS a teacher. What is the correct answer?",
+            "options": [
+              "Yes, she is.",
+              "Yes, she are.",
+              "Yes, she am.",
+              "Yes, she have."
+            ],
+            "correct": "Yes, she is."
+          },
+          {
+            "id": "cg13",
+            "type": "listening",
+            "speak": "Are you riding scooters?",
+            "question": "🔊 Listen. You ARE riding scooters. What is the correct answer?",
+            "options": [
+              "Yes, we are.",
+              "Yes, we is.",
+              "Yes, I am.",
+              "Yes, we have."
+            ],
+            "correct": "Yes, we are."
+          },
+          {
+            "id": "cg14",
+            "type": "mcq",
+            "question": "Do they have big teeth? Choose the correct answer.",
+            "options": [
+              "Yes, they do.",
+              "Yes, they are.",
+              "Yes, they have.",
+              "Yes, they can."
+            ],
+            "correct": "Yes, they do."
+          },
+          {
+            "id": "cg15",
+            "type": "mcq",
+            "question": "He's/She's good at ___. (He is catching a ball)",
+            "options": [
+              "catching",
+              "catch",
+              "catched",
+              "catches"
+            ],
+            "correct": "catching"
+          },
+          {
+            "id": "cg16",
+            "type": "mcq",
+            "question": "They're ___ than me. (giraffes are very tall)",
+            "options": [
+              "taller",
+              "tallest",
+              "more tall",
+              "tall"
+            ],
+            "correct": "taller"
+          },
+          {
+            "id": "cg17",
+            "type": "listening",
+            "speak": "What are you wearing?",
+            "question": "🔊 Listen. Choose the correct response.",
+            "options": [
+              "I'm wearing a jacket.",
+              "I wearing a jacket.",
+              "I wear a jacket now.",
+              "I am wear a jacket."
+            ],
+            "correct": "I'm wearing a jacket."
+          },
+          {
+            "id": "cg18",
+            "type": "mcq",
+            "question": "Choose the CORRECT sentence.",
+            "options": [
+              "There are two cats.",
+              "There is two cats.",
+              "There are two cat.",
+              "There be two cats."
+            ],
+            "correct": "There are two cats."
+          },
+          {
+            "id": "cg19",
+            "type": "mcq",
+            "question": "___ your birthday? (asking about when someone's birthday is)",
+            "options": [
+              "When's",
+              "Where's",
+              "What's",
+              "Who's"
+            ],
+            "correct": "When's"
+          },
+          {
+            "id": "cg20",
+            "type": "listening",
+            "speak": "How does it taste?",
+            "question": "🔊 Listen. Choose the correct response.",
+            "options": [
+              "It tastes good.",
+              "It taste good.",
+              "It tasting good.",
+              "It is taste good."
+            ],
+            "correct": "It tastes good."
+          }
+        ]
+      },
+      "phonics": {
+        "label": "Phonics",
+        "emoji": "🔤",
+        "questions": [
+          {
+            "id": "ph01",
+            "type": "mcq",
+            "question": "Which word uses the a_e pattern?",
+            "options": [
+              "cake",
+              "rain",
+              "say",
+              "bee"
+            ],
+            "correct": "cake"
+          },
+          {
+            "id": "ph02",
+            "type": "mcq",
+            "question": "Which word uses the 'ai' vowel team?",
+            "options": [
+              "rain",
+              "cake",
+              "say",
+              "kite"
+            ],
+            "correct": "rain"
+          },
+          {
+            "id": "ph03",
+            "type": "mcq",
+            "question": "Which word uses the 'ay' vowel team?",
+            "options": [
+              "say",
+              "rain",
+              "cake",
+              "bee"
+            ],
+            "correct": "say"
+          },
+          {
+            "id": "ph04",
+            "type": "mcq",
+            "question": "'kite' uses which phonics pattern?",
+            "options": [
+              "i_e",
+              "igh",
+              "ie",
+              "y"
+            ],
+            "correct": "i_e"
+          },
+          {
+            "id": "ph05",
+            "type": "mcq",
+            "question": "Which word uses the 'igh' pattern?",
+            "options": [
+              "night",
+              "kite",
+              "pie",
+              "spy"
+            ],
+            "correct": "night"
+          },
+          {
+            "id": "ph06",
+            "type": "mcq",
+            "question": "Which word uses the 'ie' pattern?",
+            "options": [
+              "pie",
+              "night",
+              "sky",
+              "bike"
+            ],
+            "correct": "pie"
+          },
+          {
+            "id": "ph07",
+            "type": "mcq",
+            "question": "'bone' uses which phonics pattern?",
+            "options": [
+              "o_e",
+              "oa",
+              "ow",
+              "u_e"
+            ],
+            "correct": "o_e"
+          },
+          {
+            "id": "ph08",
+            "type": "mcq",
+            "question": "Which word uses the 'oa' pattern?",
+            "options": [
+              "boat",
+              "bone",
+              "row",
+              "home"
+            ],
+            "correct": "boat",
+            "image": "/images/en_boat.jpg"
+          },
+          {
+            "id": "ph09",
+            "type": "mcq",
+            "question": "Which word uses the 'ee' vowel team?",
+            "options": [
+              "bee",
+              "leaf",
+              "key",
+              "candy"
+            ],
+            "correct": "bee",
+            "image": "/images/en_bee.jpg"
+          },
+          {
+            "id": "ph10",
+            "type": "mcq",
+            "question": "Which word uses the 'ea' vowel team?",
+            "options": [
+              "leaf",
+              "bee",
+              "key",
+              "happy"
+            ],
+            "correct": "leaf"
+          },
+          {
+            "id": "ph11",
+            "type": "mcq",
+            "question": "'candy' ends with which long 'e' spelling?",
+            "options": [
+              "y",
+              "ey",
+              "ee",
+              "ea"
+            ],
+            "correct": "y"
+          },
+          {
+            "id": "ph12",
+            "type": "mcq",
+            "question": "Which word has the long 'u' sound (u_e)?",
+            "options": [
+              "cube",
+              "boat",
+              "night",
+              "rain"
+            ],
+            "correct": "cube"
+          },
+          {
+            "id": "ph13",
+            "type": "mcq",
+            "question": "Which word uses the 'ow' pattern for long 'o'?",
+            "options": [
+              "yellow",
+              "boat",
+              "bone",
+              "home"
+            ],
+            "correct": "yellow"
+          },
+          {
+            "id": "ph14",
+            "type": "mcq",
+            "question": "'school' has which vowel sound?",
+            "options": [
+              "oo",
+              "oa",
+              "ee",
+              "ay"
+            ],
+            "correct": "oo",
+            "image": "/images/en_school.jpg"
+          },
+          {
+            "id": "ph15",
+            "type": "mcq",
+            "question": "Which word rhymes with 'goat'?",
+            "options": [
+              "coat",
+              "bee",
+              "kite",
+              "rain"
+            ],
+            "correct": "coat",
+            "image": "/images/en_goat.jpg"
+          }
+        ]
+      },
+      "vocab_themes": {
+        "label": "Vocabulary Themes",
+        "emoji": "🏷️",
+        "questions": [
+          {
+            "id": "vt01",
+            "type": "mcq",
+            "question": "Which word is a piece of clothing?",
+            "options": [
+              "jacket",
+              "carrot",
+              "doctor",
+              "school"
+            ],
+            "correct": "jacket",
+            "image": "/images/en_jacket.jpg"
+          },
+          {
+            "id": "vt02",
+            "type": "mcq",
+            "question": "Which word is a food?",
+            "options": [
+              "pasta",
+              "jacket",
+              "sink",
+              "parrot"
+            ],
+            "correct": "pasta",
+            "image": "/images/en_pasta.jpg"
+          },
+          {
+            "id": "vt03",
+            "type": "mcq",
+            "question": "What job does this person do?",
+            "options": [
+              "doctor",
+              "teacher",
+              "nurse",
+              "chef"
+            ],
+            "correct": "teacher",
+            "image": "/images/en_teacher.jpg"
+          },
+          {
+            "id": "vt04",
+            "type": "mcq",
+            "question": "Which place is in a neighborhood?",
+            "options": [
+              "zoo",
+              "sink",
+              "jacket",
+              "sheep"
+            ],
+            "correct": "zoo",
+            "image": "/images/en_zoo.jpg"
+          },
+          {
+            "id": "vt05",
+            "type": "mcq",
+            "question": "Which is an outdoor activity?",
+            "options": [
+              "ride a scooter",
+              "read a book",
+              "sleep",
+              "eat dinner"
+            ],
+            "correct": "ride a scooter"
+          },
+          {
+            "id": "vt06",
+            "type": "mcq",
+            "question": "Which animal lives in the wild?",
+            "options": [
+              "crocodile",
+              "chicken",
+              "cow",
+              "sheep"
+            ],
+            "correct": "crocodile",
+            "image": "/images/en_crocodile.jpg"
+          },
+          {
+            "id": "vt07",
+            "type": "mcq",
+            "question": "Which word is a body part? (not a room part)",
+            "options": [
+              "arm",
+              "floor",
+              "ceiling",
+              "sink"
+            ],
+            "correct": "arm"
+          },
+          {
+            "id": "vt08",
+            "type": "mcq",
+            "question": "Which word is a SENSE?",
+            "options": [
+              "taste",
+              "jacket",
+              "school",
+              "goat"
+            ],
+            "correct": "taste"
+          },
+          {
+            "id": "vt09",
+            "type": "mcq",
+            "question": "What is this?",
+            "options": [
+              "T-shirt",
+              "jacket",
+              "skirt",
+              "shorts"
+            ],
+            "correct": "T-shirt",
+            "image": "/images/en_tshirt.jpg"
+          },
+          {
+            "id": "vt10",
+            "type": "mcq",
+            "question": "What job does this person do?",
+            "options": [
+              "doctor",
+              "teacher",
+              "actor",
+              "singer"
+            ],
+            "correct": "doctor",
+            "image": "/images/en_doctor.jpg"
+          },
+          {
+            "id": "vt11",
+            "type": "mcq",
+            "question": "What is this vegetable?",
+            "options": [
+              "carrot",
+              "onion",
+              "pepper",
+              "tomato"
+            ],
+            "correct": "carrot",
+            "image": "/images/en_carrot.jpg"
+          },
+          {
+            "id": "vt12",
+            "type": "mcq",
+            "question": "What can you do at a library?",
+            "options": [
+              "read books",
+              "swim",
+              "eat lunch",
+              "play football"
+            ],
+            "correct": "read books",
+            "image": "/images/en_library.jpg"
+          },
+          {
+            "id": "vt13",
+            "type": "mcq",
+            "question": "Which word is NOT a food?",
+            "options": [
+              "skirt",
+              "milk",
+              "rice",
+              "meat"
+            ],
+            "correct": "skirt"
+          },
+          {
+            "id": "vt14",
+            "type": "mcq",
+            "question": "Which word is an animal?",
+            "options": [
+              "parrot 🦜",
+              "piano",
+              "carrot",
+              "skirt"
+            ],
+            "correct": "parrot 🦜"
+          },
+          {
+            "id": "vt15",
+            "type": "mcq",
+            "question": "Which word is a musical instrument?",
+            "options": [
+              "violin",
+              "elephant",
+              "library",
+              "jacket"
+            ],
+            "correct": "violin",
+            "image": "/images/en_violin.jpg"
+          }
+        ]
+      },
+      "eng_math": {
+        "label": "English Math",
+        "emoji": "🔢",
+        "questions": [
+          {
+            "id": "em01",
+            "type": "mcq",
+            "question": "Double 5 = ?",
+            "options": [
+              "10",
+              "8",
+              "12",
+              "15"
+            ],
+            "correct": "10"
+          },
+          {
+            "id": "em02",
+            "type": "mcq",
+            "question": "Half of 16 = ?",
+            "options": [
+              "8",
+              "6",
+              "4",
+              "10"
+            ],
+            "correct": "8"
+          },
+          {
+            "id": "em03",
+            "type": "mcq",
+            "question": "True or False: Double 7 = 14.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "True"
+          },
+          {
+            "id": "em04",
+            "type": "mcq",
+            "question": "True or False: Half of 10 = 4.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "em05",
+            "type": "mcq",
+            "question": "True or False: Double 18 = 9.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "em06",
+            "type": "mcq",
+            "question": "Today is Monday. What day is tomorrow?",
+            "options": [
+              "Tuesday",
+              "Sunday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "correct": "Tuesday"
+          },
+          {
+            "id": "em07",
+            "type": "mcq",
+            "question": "Today is Thursday. What day was it yesterday?",
+            "options": [
+              "Wednesday",
+              "Friday",
+              "Tuesday",
+              "Monday"
+            ],
+            "correct": "Wednesday"
+          },
+          {
+            "id": "em08",
+            "type": "mcq",
+            "question": "The lemon is ___ than the watermelon.",
+            "options": [
+              "lighter",
+              "heavier",
+              "bigger",
+              "taller"
+            ],
+            "correct": "lighter"
+          },
+          {
+            "id": "em09",
+            "type": "mcq",
+            "question": "9 + 4 = ?",
+            "options": [
+              "13",
+              "12",
+              "14",
+              "11"
+            ],
+            "correct": "13"
+          },
+          {
+            "id": "em10",
+            "type": "mcq",
+            "question": "17 - 4 = ?",
+            "options": [
+              "13",
+              "12",
+              "14",
+              "11"
+            ],
+            "correct": "13"
+          },
+          {
+            "id": "em11",
+            "type": "mcq",
+            "question": "Which number is the smallest?",
+            "options": [
+              "12",
+              "21",
+              "33",
+              "32"
+            ],
+            "correct": "12"
+          },
+          {
+            "id": "em12",
+            "type": "mcq",
+            "question": "Eighteen is ___ greater than fifteen.",
+            "options": [
+              "three",
+              "two",
+              "four",
+              "one"
+            ],
+            "correct": "three"
+          },
+          {
+            "id": "em13",
+            "type": "mcq",
+            "question": "Sam has 22 apples. He eats 7. How many are left?",
+            "options": [
+              "15",
+              "16",
+              "14",
+              "13"
+            ],
+            "correct": "15"
+          },
+          {
+            "id": "em14",
+            "type": "mcq",
+            "question": "Lily has 41 candies. She buys 12 more. How many does she have now?",
+            "options": [
+              "53",
+              "52",
+              "51",
+              "43"
+            ],
+            "correct": "53"
+          },
+          {
+            "id": "em15",
+            "type": "mcq",
+            "question": "The clock shows the hour hand at 7 and the minute hand at 12. What time is it?",
+            "options": [
+              "7 o'clock",
+              "6 o'clock",
+              "8 o'clock",
+              "half past 7"
+            ],
+            "correct": "7 o'clock"
+          }
+        ]
+      },
+      "science": {
+        "label": "Science",
+        "emoji": "🔬",
+        "questions": [
+          {
+            "id": "sc01",
+            "type": "mcq",
+            "question": "What do all animals need to stay alive?",
+            "options": [
+              "air, water and food",
+              "only food",
+              "only water",
+              "only air"
+            ],
+            "correct": "air, water and food"
+          },
+          {
+            "id": "sc02",
+            "type": "mcq",
+            "question": "True or False: We need food and water to stay alive.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "True"
+          },
+          {
+            "id": "sc03",
+            "type": "mcq",
+            "question": "True or False: We should drink a lot of soft drinks every day.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "sc04",
+            "type": "mcq",
+            "question": "Which is a HEALTHY food?",
+            "options": [
+              "fruit and vegetables",
+              "soft drinks",
+              "candy",
+              "fast food"
+            ],
+            "correct": "fruit and vegetables"
+          },
+          {
+            "id": "sc05",
+            "type": "mcq",
+            "question": "Which is an UNHEALTHY food?",
+            "options": [
+              "candy",
+              "milk",
+              "baked chicken",
+              "salad"
+            ],
+            "correct": "candy"
+          },
+          {
+            "id": "sc06",
+            "type": "mcq",
+            "question": "True or False: A push is a force away from you.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "True"
+          },
+          {
+            "id": "sc07",
+            "type": "mcq",
+            "question": "True or False: Pushing and pulling are the same thing.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "sc08",
+            "type": "mcq",
+            "question": "What is a PULL force?",
+            "options": [
+              "a force towards you",
+              "a force away from you",
+              "a force up",
+              "a force down"
+            ],
+            "correct": "a force towards you"
+          },
+          {
+            "id": "sc09",
+            "type": "mcq",
+            "question": "Which words describe forces that make things move?",
+            "options": [
+              "push and pull",
+              "eat and drink",
+              "sing and dance",
+              "sleep and wake"
+            ],
+            "correct": "push and pull"
+          },
+          {
+            "id": "sc10",
+            "type": "mcq",
+            "question": "What do you need to turn on a washing machine?",
+            "options": [
+              "electricity",
+              "water only",
+              "candle",
+              "a key"
+            ],
+            "correct": "electricity"
+          },
+          {
+            "id": "sc11",
+            "type": "mcq",
+            "question": "True or False: Eating fruits and vegetables helps us stay healthy.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "True"
+          },
+          {
+            "id": "sc12",
+            "type": "mcq",
+            "question": "True or False: Vegetables are unhealthy food.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "sc13",
+            "type": "mcq",
+            "question": "A girl is pushing a shopping cart. The cart moves ___ her.",
+            "options": [
+              "away from",
+              "towards",
+              "under",
+              "above"
+            ],
+            "correct": "away from"
+          },
+          {
+            "id": "sc14",
+            "type": "mcq",
+            "question": "Which action makes something move TOWARDS you?",
+            "options": [
+              "pull",
+              "push",
+              "kick away",
+              "throw"
+            ],
+            "correct": "pull"
+          },
+          {
+            "id": "sc15",
+            "type": "mcq",
+            "question": "If you eat the wrong food you will be ___.",
+            "options": [
+              "unhealthy",
+              "healthy",
+              "strong",
+              "happy"
+            ],
+            "correct": "unhealthy"
+          }
+        ]
+      },
+      "reading": {
+        "label": "Reading",
+        "emoji": "📖",
+        "questions": [
+          {
+            "id": "rd01",
+            "type": "mcq",
+            "question": "Read: 'My name is Ben. I live in a small neighborhood.' Where does Ben live?",
+            "options": [
+              "in a small neighborhood",
+              "in a big city",
+              "on a farm",
+              "near the sea"
+            ],
+            "correct": "in a small neighborhood"
+          },
+          {
+            "id": "rd02",
+            "type": "mcq",
+            "question": "Read: 'I go to the park with my sister.' Who does Ben go to the park with?",
+            "options": [
+              "his sister",
+              "his mom",
+              "his dad",
+              "his friend"
+            ],
+            "correct": "his sister"
+          },
+          {
+            "id": "rd03",
+            "type": "mcq",
+            "question": "Read: 'There is a bakery near the park. The bakery sells yummy cakes.' What does the bakery sell?",
+            "options": [
+              "cakes",
+              "books",
+              "vegetables",
+              "toys"
+            ],
+            "correct": "cakes"
+          },
+          {
+            "id": "rd04",
+            "type": "mcq",
+            "question": "Read: 'There is a park near my house.' The park is near ___.",
+            "options": [
+              "Ben's house",
+              "the bakery",
+              "the school",
+              "the library"
+            ],
+            "correct": "Ben's house"
+          },
+          {
+            "id": "rd05",
+            "type": "mcq",
+            "question": "Read: 'I live in a small neighborhood.' True or False: Ben lives in a BIG neighborhood.",
+            "options": [
+              "False",
+              "True"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "rd06",
+            "type": "mcq",
+            "question": "Read: 'I go to the park with my sister.' True or False: Ben goes to the park with his MOM.",
+            "options": [
+              "False",
+              "True"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "rd07",
+            "type": "mcq",
+            "question": "Read: 'My school is also in my neighborhood.' True or False: There is a school in Ben's neighborhood.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correct": "True"
+          },
+          {
+            "id": "rd08",
+            "type": "mcq",
+            "question": "Read: 'The bakery sells yummy cakes and bread.' True or False: The bakery sells vegetables.",
+            "options": [
+              "False",
+              "True"
+            ],
+            "correct": "False"
+          },
+          {
+            "id": "rd09",
+            "type": "mcq",
+            "question": "Read: 'There is a bakery near the park.' What is near the park?",
+            "options": [
+              "a bakery",
+              "a library",
+              "a school",
+              "a zoo"
+            ],
+            "correct": "a bakery"
+          },
+          {
+            "id": "rd10",
+            "type": "mcq",
+            "question": "Read: 'I like my neighborhood.' Does Ben like his neighborhood?",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "correct": "Yes"
+          }
+        ]
+      },
+      "speaking": {
+        "label": "Listening & Speaking",
+        "emoji": "🔊",
+        "questions": [
+          {
+            "id": "sp01",
+            "type": "listening",
+            "speak": "Have you got a dog?",
+            "question": "🔊 Listen and choose the correct answer.",
+            "options": [
+              "Yes, I have.",
+              "Yes, I am.",
+              "Yes, I do.",
+              "Yes, I can."
+            ],
+            "correct": "Yes, I have."
+          },
+          {
+            "id": "sp02",
+            "type": "listening",
+            "speak": "Would you like some milk?",
+            "question": "🔊 Listen and choose the correct answer.",
+            "options": [
+              "Yes, please.",
+              "Yes, I have.",
+              "Yes, I am.",
+              "Yes, there is."
+            ],
+            "correct": "Yes, please."
+          },
+          {
+            "id": "sp03",
+            "type": "listening",
+            "speak": "Are you happy?",
+            "question": "🔊 Listen. You ARE happy. Choose the correct answer.",
+            "options": [
+              "Yes, I am.",
+              "Yes, I have.",
+              "Yes, I do.",
+              "Yes, I can."
+            ],
+            "correct": "Yes, I am."
+          },
+          {
+            "id": "sp04",
+            "type": "listening",
+            "speak": "Where is the cat?",
+            "question": "🔊 Listen. The cat is on the table. Choose the correct answer.",
+            "options": [
+              "It's on the table.",
+              "It's in the table.",
+              "It's under the table.",
+              "It's next to the table."
+            ],
+            "correct": "It's on the table."
+          },
+          {
+            "id": "sp05",
+            "type": "listening",
+            "speak": "How many books are there?",
+            "question": "🔊 Listen. There are 5 books. Choose the correct answer.",
+            "options": [
+              "There are five books.",
+              "There is five books.",
+              "There are fives books.",
+              "There have five books."
+            ],
+            "correct": "There are five books."
+          },
+          {
+            "id": "sp06",
+            "type": "listening",
+            "speak": "What is he wearing?",
+            "question": "🔊 Listen. He is wearing a jacket. Choose the correct answer.",
+            "options": [
+              "He's wearing a jacket.",
+              "He wearing a jacket.",
+              "He wear a jacket.",
+              "He is wear a jacket."
+            ],
+            "correct": "He's wearing a jacket."
+          },
+          {
+            "id": "sp07",
+            "type": "listening",
+            "speak": "Do you want to go to the zoo?",
+            "question": "🔊 Listen. You DO want to go. Choose the correct answer.",
+            "options": [
+              "Yes, I do.",
+              "Yes, I am.",
+              "Yes, I have.",
+              "Yes, I can."
+            ],
+            "correct": "Yes, I do."
+          },
+          {
+            "id": "sp08",
+            "type": "listening",
+            "speak": "Is he a police officer?",
+            "question": "🔊 Listen. He IS a police officer. Choose the correct answer.",
+            "options": [
+              "Yes, he is.",
+              "Yes, he are.",
+              "Yes, he do.",
+              "Yes, he have."
+            ],
+            "correct": "Yes, he is."
+          },
+          {
+            "id": "sp09",
+            "type": "listening",
+            "speak": "Are you riding scooters?",
+            "question": "🔊 Listen. You ARE NOT riding scooters. You are riding bikes. Choose the correct answer.",
+            "options": [
+              "No, we aren't. We're riding bikes.",
+              "No, we isn't.",
+              "No, I'm not.",
+              "No, we aren't riding."
+            ],
+            "correct": "No, we aren't. We're riding bikes."
+          },
+          {
+            "id": "sp10",
+            "type": "listening",
+            "speak": "What do you have for breakfast?",
+            "question": "🔊 Listen. Choose the correct response.",
+            "options": [
+              "I have rice for breakfast.",
+              "I has rice for breakfast.",
+              "I eating rice for breakfast.",
+              "I am have rice for breakfast."
+            ],
+            "correct": "I have rice for breakfast."
+          },
+          {
+            "id": "sp11",
+            "type": "listening",
+            "speak": "When is your birthday?",
+            "question": "🔊 Listen. Your birthday is in June. Choose the correct answer.",
+            "options": [
+              "My birthday is in June.",
+              "My birthday are in June.",
+              "My birthday in June.",
+              "My birthday was June."
+            ],
+            "correct": "My birthday is in June."
+          },
+          {
+            "id": "sp12",
+            "type": "listening",
+            "speak": "Do they have big teeth?",
+            "question": "🔊 Listen. They DO have big teeth. Choose the correct answer.",
+            "options": [
+              "Yes, they do.",
+              "Yes, they are.",
+              "Yes, they have.",
+              "Yes, they can."
+            ],
+            "correct": "Yes, they do."
+          },
+          {
+            "id": "sp13",
+            "type": "listening",
+            "speak": "elephant",
+            "question": "🔊 Listen to the word. Choose the correct spelling.",
+            "options": [
+              "elephant",
+              "elephent",
+              "elefant",
+              "elephan"
+            ],
+            "correct": "elephant"
+          },
+          {
+            "id": "sp14",
+            "type": "listening",
+            "speak": "crocodile",
+            "question": "🔊 Listen to the word. Choose the correct spelling.",
+            "options": [
+              "crocadile",
+              "crocodile",
+              "crokodile",
+              "crocodil"
+            ],
+            "correct": "crocodile"
+          },
+          {
+            "id": "sp15",
+            "type": "listening",
+            "speak": "teacher",
+            "question": "🔊 Listen to the word. Choose the correct spelling.",
+            "options": [
+              "techer",
+              "teachar",
+              "teacher",
+              "teatcher"
+            ],
+            "correct": "teacher"
+          },
+          {
+            "id": "sp16",
+            "type": "listening",
+            "speak": "Are there any bananas?",
+            "question": "🔊 Listen. There ARE bananas. Choose the correct answer.",
+            "options": [
+              "Yes, there are.",
+              "Yes, there is.",
+              "Yes, they are.",
+              "Yes, it is."
+            ],
+            "correct": "Yes, there are."
+          },
+          {
+            "id": "sp17",
+            "type": "listening",
+            "speak": "How does it feel?",
+            "question": "🔊 Listen. It feels hard and round. Choose the correct answer.",
+            "options": [
+              "It feels hard and round.",
+              "It feeling hard and round.",
+              "It feel hard and round.",
+              "It is feel hard and round."
+            ],
+            "correct": "It feels hard and round."
+          },
+          {
+            "id": "sp18",
+            "type": "listening",
+            "speak": "giraffe",
+            "question": "🔊 Listen to the word. Choose the correct spelling.",
+            "options": [
+              "giraffe",
+              "girafee",
+              "girafe",
+              "girrafe"
+            ],
+            "correct": "giraffe"
+          },
+          {
+            "id": "sp19",
+            "type": "listening",
+            "speak": "butterfly",
+            "question": "🔊 Listen to the word. Choose the correct spelling.",
+            "options": [
+              "butterfli",
+              "butterfly",
+              "buterfly",
+              "buttarfly"
+            ],
+            "correct": "butterfly"
+          },
+          {
+            "id": "sp20",
+            "type": "listening",
+            "speak": "What are you good at?",
+            "question": "🔊 Listen. Choose the correct response.",
+            "options": [
+              "I'm good at swimming.",
+              "I good at swimming.",
+              "I am good swimming.",
+              "I'm well at swimming."
+            ],
+            "correct": "I'm good at swimming."
+          }
+        ]
+      },
+      "spelling": {
+        "label": "Spelling Practice",
+        "emoji": "✍️",
+        "questions": [
+          {
+            "id": "sw01",
+            "type": "mcq",
+            "question": "Which spelling is correct?",
+            "options": [
+              "elephent",
+              "elephant",
+              "elefant",
+              "elephan"
+            ],
+            "correct": "elephant"
+          },
+          {
+            "id": "sw02",
+            "type": "mcq",
+            "question": "Which spelling is correct?",
+            "options": [
+              "crocadile",
+              "crokodile",
+              "crocodile",
+              "crocodil"
+            ],
+            "correct": "crocodile"
+          },
+          {
+            "id": "sw03",
+            "type": "mcq",
+            "question": "Which spelling is correct?",
+            "options": [
+              "techer",
+              "teachar",
+              "teatcher",
+              "teacher"
+            ],
+            "correct": "teacher"
+          },
+          {
+            "id": "sw04",
+            "type": "mcq",
+            "question": "Which spelling is correct?",
+            "options": [
+              "jackat",
+              "jakket",
+              "jacket",
+              "jakcat"
+            ],
+            "correct": "jacket",
+            "image": "/images/en_jacket.jpg"
+          },
+          {
+            "id": "sw05",
+            "type": "mcq",
+            "question": "Which spelling is correct?",
+            "options": [
+              "vegetabels",
+              "vegitables",
+              "vegetables",
+              "vegetibles"
+            ],
+            "correct": "vegetables",
+            "image": "/images/en_vegetables.jpg"
+          },
+          {
+            "id": "sw06",
+            "type": "mcq",
+            "question": "Which spelling is correct?",
+            "options": [
+              "giraffe",
+              "girafee",
+              "girafe",
+              "girrafe"
+            ],
+            "correct": "giraffe"
+          },
+          {
+            "id": "sw07",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_hen.jpg",
+            "correct": "hen"
+          },
+          {
+            "id": "sw08",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_bee.jpg",
+            "correct": "bee"
+          },
+          {
+            "id": "sw09",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_bus.jpg",
+            "correct": "bus"
+          },
+          {
+            "id": "sw10",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_egg.jpg",
+            "correct": "egg"
+          },
+          {
+            "id": "sw11",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_frog.jpg",
+            "correct": "frog"
+          },
+          {
+            "id": "sw12",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_fish.jpg",
+            "correct": "fish"
+          },
+          {
+            "id": "sw13",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_ship.jpg",
+            "correct": "ship"
+          },
+          {
+            "id": "sw14",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_goat.jpg",
+            "correct": "goat"
+          },
+          {
+            "id": "sw15",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_boat.jpg",
+            "correct": "boat"
+          },
+          {
+            "id": "sw16",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_tree.jpg",
+            "correct": "tree"
+          },
+          {
+            "id": "sw17",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_train.jpg",
+            "correct": "train"
+          },
+          {
+            "id": "sw18",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_dress.jpg",
+            "correct": "dress",
+            "hint": "d r _ _ _"
+          },
+          {
+            "id": "sw19",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_shoes.jpg",
+            "correct": "shoes",
+            "hint": "s h _ _ _"
+          },
+          {
+            "id": "sw20",
+            "type": "spelling",
+            "question": "Look at the picture and write the word:",
+            "image": "/images/en_elephant.jpg",
+            "correct": "elephant",
+            "hint": "e l e _ h _ n t"
+          }
+        ]
+      }
+    }
+  }
+}

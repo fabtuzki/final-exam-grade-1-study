@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import questionsData from '../data/questions.json'
+import englishData  from '../data/english_questions.json'
 
 function shuffle(arr) {
   return [...arr].sort(() => 0.5 - Math.random())
@@ -8,31 +9,29 @@ function shuffle(arr) {
 function buildSession(allData) {
   const subtopics = []
   for (const [pk, parent] of Object.entries(allData)) {
-    for (const [sk, sub] of Object.entries(parent.subtopics)) {
+    for (const [, sub] of Object.entries(parent.subtopics)) {
       const taggedQs = sub.questions.map(q => ({
         ...q,
-        parentKey: pk,
-        subKey: sk,
         parentLabel: parent.label,
-        subLabel: sub.label,
-        subEmoji: sub.emoji,
+        subLabel:    sub.label,
+        subEmoji:    sub.emoji,
       }))
       subtopics.push(taggedQs)
     }
   }
-  // Guarantee 1 question per subtopic
   let picked = subtopics.map(qs => shuffle(qs)[0])
   const pickedIds = new Set(picked.map(q => q.id))
-  // Fill to 10 with random remaining
   const remaining = subtopics.flat().filter(q => !pickedIds.has(q.id))
   const extra = shuffle(remaining).slice(0, Math.max(0, 10 - picked.length))
   picked = shuffle([...picked, ...extra])
-  return picked.map(q => ({ ...q, options: shuffle(q.options) }))
+  return picked.map(q => ({ ...q, options: q.options ? shuffle(q.options) : undefined }))
 }
 
 export default function App() {
   const [allData, setAllData]             = useState(null)
+  const [engAllData, setEngAllData]       = useState(null)
   const [view, setView]                   = useState('DASHBOARD')
+  const [quizMode, setQuizMode]           = useState('vi')   // 'vi' | 'en'
   const [session, setSession]             = useState([])
   const [qIndex, setQIndex]               = useState(0)
   const [userAnswers, setUserAnswers]     = useState([])
@@ -41,38 +40,54 @@ export default function App() {
   const [reports, setReports]             = useState([])
   const [reportedIds, setReportedIds]     = useState(new Set())
   const [questionStats, setQuestionStats] = useState({})
+  const [engStats, setEngStats]           = useState({})
+  const [spellingInput, setSpelling]      = useState('')
+  const [isSpeaking, setIsSpeaking]       = useState(false)
+  const spellingRef = useRef(null)
 
   useEffect(() => {
     setAllData(questionsData)
+    setEngAllData(englishData)
 
     const saved = localStorage.getItem('muoiHistory')
     if (saved) setHistory(JSON.parse(saved))
-
     const savedReports = localStorage.getItem('muoiReports')
     if (savedReports) setReports(JSON.parse(savedReports))
-
     const savedStats = localStorage.getItem('muoiQuestionStats')
     if (savedStats) setQuestionStats(JSON.parse(savedStats))
+    const savedEngStats = localStorage.getItem('muoiEngStats')
+    if (savedEngStats) setEngStats(JSON.parse(savedEngStats))
   }, [])
 
-  const startQuiz = () => {
-    const picked = buildSession(allData)
+  const speakText = (text) => {
+    if (!window.speechSynthesis) return
+    window.speechSynthesis.cancel()
+    const u = new SpeechSynthesisUtterance(text)
+    u.lang = 'en-US'
+    u.rate = 0.8
+    u.onstart = () => setIsSpeaking(true)
+    u.onend   = () => setIsSpeaking(false)
+    window.speechSynthesis.speak(u)
+  }
+
+  const startQuiz = (mode = 'vi') => {
+    const data = mode === 'en' ? engAllData : allData
+    const picked = buildSession(data)
     setSession(picked)
     setUserAnswers([])
     setQIndex(0)
     setLastAnswer(null)
     setReportedIds(new Set())
+    setSpelling('')
+    setQuizMode(mode)
     setView('QUIZ')
   }
 
   const reportQuestion = () => {
     const q = session[qIndex]
     const report = {
-      id: q.id,
-      question: q.question,
-      hasImage: !!q.image,
-      topic: q.subLabel,
-      date: new Date().toLocaleDateString('vi-VN'),
+      id: q.id, question: q.question, hasImage: !!q.image,
+      topic: q.subLabel, date: new Date().toLocaleDateString('vi-VN'),
     }
     const newReports = [report, ...reports.filter(r => r.id !== q.id)]
     setReports(newReports)
@@ -87,23 +102,27 @@ export default function App() {
 
   const handleAnswer = (answer) => {
     const q = session[qIndex]
-    const correct = q.correct
-    const isCorrect = answer === correct
+    const correct   = q.correct
+    const isCorrect = answer.trim().toLowerCase() === correct.trim().toLowerCase()
     setUserAnswers(prev => [...prev, answer])
     setLastAnswer({ answer, correct, isCorrect })
+    setSpelling('')
 
-    // Update live stats immediately (persists even if quiz is exited)
-    setQuestionStats(prev => {
+    const statsKey = quizMode === 'en' ? 'muoiEngStats' : 'muoiQuestionStats'
+    const setter   = quizMode === 'en' ? setEngStats : setQuestionStats
+    setter(prev => {
       const next = { ...prev }
       if (!next[q.id]) next[q.id] = { correct: 0, wrong: 0 }
       next[q.id] = {
         correct: next[q.id].correct + (isCorrect ? 1 : 0),
         wrong:   next[q.id].wrong   + (isCorrect ? 0 : 1),
       }
-      localStorage.setItem('muoiQuestionStats', JSON.stringify(next))
+      localStorage.setItem(statsKey, JSON.stringify(next))
       return next
     })
 
+    window.speechSynthesis?.cancel()
+    setIsSpeaking(false)
     setView('FEEDBACK')
   }
 
@@ -111,23 +130,23 @@ export default function App() {
     if (qIndex + 1 < session.length) {
       setQIndex(i => i + 1)
       setLastAnswer(null)
+      setSpelling('')
       setView('QUIZ')
     } else {
       setView('RESULTS')
     }
   }
 
-  // Save history when RESULTS view is entered
   useEffect(() => {
     if (view !== 'RESULTS' || !session.length) return
     let score = 0
-    userAnswers.forEach((a, i) => { if (session[i] && a === session[i].correct) score++ })
+    userAnswers.forEach((a, i) => {
+      if (session[i] && a.trim().toLowerCase() === session[i].correct.trim().toLowerCase()) score++
+    })
     const attempt = {
       date: new Date().toLocaleDateString('vi-VN'),
-      topic: 'Tổng hợp',
-      score,
-      total: session.length,
-      perfect: score === session.length,
+      topic: quizMode === 'en' ? '🇬🇧 English' : 'Tổng hợp',
+      score, total: session.length, perfect: score === session.length,
     }
     setHistory(prev => {
       const newHistory = [attempt, ...prev].slice(0, 20)
@@ -136,39 +155,40 @@ export default function App() {
     })
   }, [view]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Auto-focus spelling input when question changes
+  useEffect(() => {
+    if (view === 'QUIZ' && session[qIndex]?.type === 'spelling') {
+      setTimeout(() => spellingRef.current?.focus(), 100)
+    }
+  }, [view, qIndex]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const exitQuiz = () => {
+    window.speechSynthesis?.cancel()
     setView('DASHBOARD')
     setSession([])
     setUserAnswers([])
     setQIndex(0)
     setLastAnswer(null)
+    setSpelling('')
   }
 
-  // Compute per-subtopic stats for dashboard
-  const computeTopicStats = () => {
-    if (!allData) return []
+  const computeTopicStats = (data, stats) => {
+    if (!data) return []
     const result = []
-    for (const [, parent] of Object.entries(allData)) {
+    for (const [, parent] of Object.entries(data)) {
       for (const [, sub] of Object.entries(parent.subtopics)) {
         let correct = 0, wrong = 0
         for (const q of sub.questions) {
-          const s = questionStats[q.id]
+          const s = stats[q.id]
           if (s) { correct += s.correct; wrong += s.wrong }
         }
-        result.push({
-          label: sub.label,
-          emoji: sub.emoji,
-          parentLabel: parent.label,
-          correct,
-          wrong,
-          total: correct + wrong,
-        })
+        result.push({ label: sub.label, emoji: sub.emoji, correct, wrong, total: correct + wrong })
       }
     }
     return result
   }
 
-  if (!allData) {
+  if (!allData || !engAllData) {
     return (
       <div className="app-container">
         <div className="card" style={{ textAlign: 'center', marginTop: '20vh' }}>
@@ -184,47 +204,62 @@ export default function App() {
 
   // ── DASHBOARD ─────────────────────────────────────────────────────────────────
   if (view === 'DASHBOARD') {
-    const topicStats = computeTopicStats()
-    const hasStats   = topicStats.some(t => t.total > 0)
+    const viStats  = computeTopicStats(allData, questionStats)
+    const enStats  = computeTopicStats(engAllData, engStats)
+    const hasViStats = viStats.some(t => t.total > 0)
+    const hasEnStats = enStats.some(t => t.total > 0)
+
+    const StatsTable = ({ rows }) => (
+      <div className="stats-table">
+        <div className="stats-header">
+          <span>Chủ đề</span><span>Đúng</span><span>Sai</span><span>Tỷ lệ</span>
+        </div>
+        {rows.map((t, i) => {
+          const rate = t.total > 0 ? Math.round((t.correct / t.total) * 100) : null
+          return (
+            <div key={i} className="stats-row">
+              <span className="stats-label">{t.emoji} {t.label}</span>
+              <span className="stats-correct">{t.correct}</span>
+              <span className="stats-wrong">{t.wrong}</span>
+              <span className={`stats-rate ${rate !== null ? (rate >= 80 ? 'good' : rate >= 50 ? 'ok' : 'bad') : ''}`}>
+                {rate !== null ? `${rate}%` : '—'}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    )
+
     return (
       <div className="app-container">
         <div className="card">
           <h1 className="title">🌟 Muối Bảo Duy Ôn Tập 🌟</h1>
-          <p className="subtitle">Mỗi quiz gồm 10 câu từ tất cả các chủ đề!</p>
 
-          <button className="btn-bubbly" onClick={startQuiz}>
-            🎯 Bắt đầu Quiz!
-          </button>
+          <div className="quiz-start-buttons">
+            <button className="btn-bubbly btn-primary" onClick={() => startQuiz('vi')}>
+              📚 Tiếng Việt & Toán
+            </button>
+            <button className="btn-bubbly btn-english" onClick={() => startQuiz('en')}>
+              🇬🇧 English Quiz!
+            </button>
+          </div>
 
-          {/* Topic stats */}
-          {hasStats && (
+          {/* Vietnamese/Math stats */}
+          {hasViStats && (
             <div className="stats-shelf">
-              <h3>📊 Thành tích theo chủ đề</h3>
-              <div className="stats-table">
-                <div className="stats-header">
-                  <span>Chủ đề</span>
-                  <span>Đúng</span>
-                  <span>Sai</span>
-                  <span>Tỷ lệ</span>
-                </div>
-                {topicStats.map((t, i) => {
-                  const rate = t.total > 0 ? Math.round((t.correct / t.total) * 100) : null
-                  return (
-                    <div key={i} className="stats-row">
-                      <span className="stats-label">{t.emoji} {t.label}</span>
-                      <span className="stats-correct">{t.correct}</span>
-                      <span className="stats-wrong">{t.wrong}</span>
-                      <span className={`stats-rate ${rate !== null ? (rate >= 80 ? 'good' : rate >= 50 ? 'ok' : 'bad') : ''}`}>
-                        {rate !== null ? `${rate}%` : '—'}
-                      </span>
-                    </div>
-                  )
-                })}
-              </div>
+              <h3>📊 Thành tích Tiếng Việt & Toán</h3>
+              <StatsTable rows={viStats} />
             </div>
           )}
 
-          {/* Trophy shelf */}
+          {/* English stats */}
+          {hasEnStats && (
+            <div className="stats-shelf stats-shelf-en">
+              <h3>📊 English Progress</h3>
+              <StatsTable rows={enStats} />
+            </div>
+          )}
+
           <div className="trophy-shelf">
             <h3>🏆 Tủ Kính Thành Tích 🏆</h3>
             <p style={{ fontSize: '0.9rem', color: '#666' }}>
@@ -276,6 +311,8 @@ export default function App() {
   if (view === 'QUIZ') {
     const q        = session[qIndex]
     const progress = (qIndex / session.length) * 100
+    const isSpelling  = q.type === 'spelling'
+    const isListening = q.type === 'listening'
 
     return (
       <div className="app-container">
@@ -292,26 +329,61 @@ export default function App() {
 
           <div className="question-text">{q.question}</div>
 
-          {q.image ? <img src={q.image} alt="Hình minh hoạ" className="question-image" /> : null}
+          {q.image && <img src={q.image} alt="illustration" className="question-image" />}
 
+          {/* Listening play button */}
+          {isListening && (
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <button className="btn-speak" onClick={() => speakText(q.speak)}>
+                {isSpeaking ? '⏸ Playing…' : '🔊 Play'}
+              </button>
+            </div>
+          )}
+
+          {/* Report button */}
           <div style={{ textAlign: 'center', marginBottom: '16px' }}>
             <button
               className={`btn-report${reportedIds.has(q.id) ? ' reported' : ''}`}
               onClick={reportQuestion}
               disabled={reportedIds.has(q.id)}
             >
-              {reportedIds.has(q.id) ? '✓ Đã ghi nhận báo lỗi' : '⚠️ Không xem được hình / Sai đáp án'}
+              {reportedIds.has(q.id) ? '✓ Đã báo lỗi' : '⚠️ Báo lỗi câu hỏi'}
             </button>
           </div>
 
-          <div className="options-grid">
-            {q.options.map((opt, i) => (
-              <button key={i} className="option-btn" onClick={() => handleAnswer(opt)}>
-                <span className="option-letter">{['A', 'B', 'C', 'D'][i]}</span>
-                <span>{opt}</span>
+          {/* Spelling input */}
+          {isSpelling ? (
+            <div className="spelling-area">
+              {q.hint && <p className="spelling-hint">{q.hint}</p>}
+              <input
+                ref={spellingRef}
+                className="spelling-input"
+                value={spellingInput}
+                onChange={e => setSpelling(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && spellingInput.trim() && handleAnswer(spellingInput.trim())}
+                placeholder="Type the word here…"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck="false"
+              />
+              <button
+                className="btn-bubbly"
+                onClick={() => spellingInput.trim() && handleAnswer(spellingInput.trim())}
+                disabled={!spellingInput.trim()}
+              >
+                Check ✓
               </button>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div className="options-grid">
+              {q.options.map((opt, i) => (
+                <button key={i} className="option-btn" onClick={() => handleAnswer(opt)}>
+                  <span className="option-letter">{['A', 'B', 'C', 'D'][i]}</span>
+                  <span>{opt}</span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     )
@@ -328,15 +400,15 @@ export default function App() {
         <div className="card feedback-card">
           <div className={`feedback-banner ${isCorrect ? 'correct' : 'wrong'}`}>
             <span className="feedback-emoji">{isCorrect ? '✅' : '❌'}</span>
-            <span>{isCorrect ? 'Đúng rồi!' : 'Chưa đúng!'}</span>
+            <span>{isCorrect ? 'Correct!' : 'Not quite!'}</span>
           </div>
 
           {!isCorrect && (
             <div className="feedback-detail">
               <p className="feedback-question-text">{q.question}</p>
-              {q.image && <img src={q.image} alt="Hình minh hoạ" className="feedback-question-image" />}
-              <p>Muối Bảo Duy chọn: <span className="wrong-ans">{answer}</span></p>
-              <p>Đáp án đúng: <span className="correct-ans">{correct}</span></p>
+              {q.image && <img src={q.image} alt="illustration" className="feedback-question-image" />}
+              <p>You answered: <span className="wrong-ans">{answer}</span></p>
+              <p>Correct answer: <span className="correct-ans">{correct}</span></p>
             </div>
           )}
 
@@ -346,12 +418,12 @@ export default function App() {
               onClick={reportQuestion}
               disabled={reportedIds.has(q.id)}
             >
-              {reportedIds.has(q.id) ? '✓ Đã ghi nhận báo lỗi' : '⚠️ Báo đáp án sai'}
+              {reportedIds.has(q.id) ? '✓ Đã báo lỗi' : '⚠️ Báo đáp án sai'}
             </button>
           </div>
 
           <button className="btn-bubbly" style={{ marginTop: '16px' }} onClick={nextQuestion}>
-            {isLast ? '🏁 Xem kết quả' : 'Câu tiếp theo →'}
+            {isLast ? '🏁 See Results' : 'Next Question →'}
           </button>
         </div>
       </div>
@@ -363,15 +435,16 @@ export default function App() {
     let score = 0
     const mistakes = []
     userAnswers.forEach((ans, i) => {
-      if (ans === session[i].correct) {
+      const correct = session[i]?.correct ?? ''
+      if (ans.trim().toLowerCase() === correct.trim().toLowerCase()) {
         score++
       } else {
         mistakes.push({
-          q: session[i].question,
-          image: session[i].image || null,
-          topic: `${session[i].subEmoji} ${session[i].subLabel}`,
-          you: ans,
-          correct: session[i].correct,
+          q:      session[i].question,
+          image:  session[i].image || null,
+          topic:  `${session[i].subEmoji} ${session[i].subLabel}`,
+          you:    ans,
+          correct,
         })
       }
     })
@@ -402,8 +475,8 @@ export default function App() {
                 <div key={i} className="review-item">
                   <div className="review-topic-tag">{m.topic}</div>
                   <div className="review-question">{m.q}</div>
-                  {m.image && <img src={m.image} alt="Hình minh hoạ" className="review-image" />}
-                  <div className="review-wrong">Muối Bảo Duy chọn: {m.you}</div>
+                  {m.image && <img src={m.image} alt="illustration" className="review-image" />}
+                  <div className="review-wrong">Muối chọn: {m.you}</div>
                   <div className="review-correct">Đáp án đúng: {m.correct}</div>
                 </div>
               ))}
@@ -411,11 +484,7 @@ export default function App() {
           )}
 
           <div style={{ display: 'flex', gap: '15px', marginTop: '30px', flexWrap: 'wrap' }}>
-            <button
-              className="btn-bubbly btn-primary"
-              style={{ flex: 1 }}
-              onClick={startQuiz}
-            >
+            <button className="btn-bubbly btn-primary" style={{ flex: 1 }} onClick={() => startQuiz(quizMode)}>
               🔄 Làm lại
             </button>
             <button
